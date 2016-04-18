@@ -1,0 +1,103 @@
+@font-face {
+  font-family: 'iconfont';
+  src: url('//at.alicdn.com/t/font_1455093385_4637263.eot'); /* IE9*/
+  src: url('//at.alicdn.com/t/font_1455093385_4637263.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('//at.alicdn.com/t/font_1455093385_4637263.woff') format('woff'), /* chrome、firefox */
+  url('//at.alicdn.com/t/font_1455093385_4637263.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+  url('//at.alicdn.com/t/font_1455093385_4637263.svg#iconfont') format('svg'); /* iOS 4.1- */
+}
+                    
+
+
+/**START: Gloaal**/
+
+
+/**END: Gloaal**/
+
+/**START: Personal Info**/
+
+@media screen and (min-width:1020px) {
+    .info {
+        width: 350px;
+        position: fixed;
+    }
+
+    div#resumeContent {
+        margin-left: 350px;
+    }
+
+    div#resumeContent {
+    padding-left: 100px;
+    padding-top: 80px;
+    padding-right: 50px;
+
+    }
+
+    .info-brief {
+        padding-top: 90px;
+    
+        padding-bottom: 20px;		
+	}
+	
+	.avatar img {
+		height: 202px;
+		width: 202px;
+		border-radius: 101px;
+	}
+}
+
+
+
+
+
+/**END: Personal Info**/
+
+
+
+
+/**START: Work Experience**/
+
+
+
+
+/**END: Work Experience**/
+
+/**START: Summary**/
+
+
+/**END: Summary**/
+
+
+/**START: Section**/
+
+
+/**END: Section**/
+
+
+
+/**START: Fragment**/
+
+
+/**END: Fragment**/
+
+
+/**START: Education**/
+
+/**END: Education**/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,80 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv='Content-type' content='text/html; charset=utf-8'>
+    <meta http-equiv="Cache-control" content="public">
+	<meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>easy resume</title>
+	<link rel="stylesheet" href="stylesheet/resume.css" type="text/css"></link>
+	<link rel="stylesheet" media="screen and (min-width: 1020px)"  href="stylesheet/resume_hdp.css" type="text/css"></link>
+	<link rel="stylesheet" media="screen and (max-width: 1019px) and (min-width: 451px)" href="stylesheet/resume_mdp.css" type="text/css"></link>
+	<link rel="stylesheet" media="screen and (max-width: 450px)" href="stylesheet/resume_ldp.css" type="text/css"></link>
+
+
+	<script src="http://lib.sinaapp.com/js/jquery/1.9.1/jquery-1.9.1.min.js"></script>
+    <script src="react/react.js"></script>
+    <script src="react/JSXTransformer.js"></script>	
+    <script type="text/jsx" src="js/basecomponents.js"></script>
+    <script type="text/jsx" src="js/resumecomponents.js"></script>
+
+	<style>
+		div#defaultMsg {
+		    display:none;
+		    min-width: 500px;
+		    height: 100%;
+		    font-size: 20px;
+		    line-height: 3;
+		    padding: 50px;
+		}
+
+		div#defaultMsg code{
+			border-radius: 10px;
+			background: #EEE;
+    		padding: 15px;
+		}
+	</style>
+
+  </head>
+  <body>
+
+	
+	<div id="container">
+    	<div id="defaultMsg">
+    		<h2>EasyResume初始化错误</h2>
+	    	
+	    	<p>
+	    		如果你看到这个页面，证明页面初始化失败了，这很可能是由于你直接在本地打开简历的缘故。EasyResume需要用HTTP的方法访问才能初始化。若你已经安装了python, 可以尝试： 
+	    	</p>
+	          
+	         <code>python -m SimpleHTTPServer</code>
+			<p>来启动HTTP服务，然后浏览器中输入<a href="http://localhost:8000">http://localhost:8000</a>去查看resume.html</p>
+
+
+
+    		<h2>EasyResume initiailized error</h2>
+	    	<p>
+	    		If you can see this, EasyResume is not working right. This is probably because you're viewing this on your file system instead of a web server. If you have installed python, try running 
+	    	</p>
+	          
+	        <code>python -m SimpleHTTPServer</code>
+	        
+			<p>and going to <a href="http://localhost:8000">http://localhost:8000</a> then check resume.html</p>
+			
+		</div>
+    </div>	
+
+	<script type="text/jsx">
+		$.getJSON("resume.json",[],function(data){
+			console.log('[resume.json read successfully]',data);
+			var json = data;
+			React.render(<div><Resume  json={json}/></div>,document.getElementById('container'));
+		});
+
+		//一秒后显示默认的提示区域，如果正常初始化，$('#defaultMsg')将不存在，故没有作用
+		window.setTimeout(function(){
+			$('#defaultMsg').show();
+		},1000)
+	</script>
+  
+  </body>
+</html>

@@ -1,0 +1,80 @@
+@media screen and (max-width:450px){
+
+	.section-title {
+    	font-size: 2.2rem;
+ }
+	
+    .avatar img {
+        height: 150px;
+        width: 150px;
+        border-radius: 75px;
+    }
+
+	.info-brief {
+		padding: 10px 0;
+	}
+
+	.info-contact {
+		text-align: center;      
+		padding: 0;      
+		margin: 10px auto;
+		font-size: 1.4rem;
+	}
+
+	div#resumeContent {
+		padding: 10px 5px;
+	}
+
+	.work-experience .work-date {
+		top: 0px;      
+		left: 0px;      height: auto;      
+		width: 100%;      box-sizing: border-box;      
+		padding-right: 0;      
+		display: block;
+		position: relative;            
+		text-align: left;      
+		font-size: 1.6rem;
+	}
+
+	.work-Fragment .work-date>div {
+		display: inline-block;
+	}
+
+	.date-separator::after {
+		content: "-";
+	}
+
+	.work-Fragment .work-content {
+		border-radius: 5px;
+		background-color: #3594cb;
+		color: white;
+		position: relative;
+		padding: 10px 25px;
+		margin-left: 0;
+		margin-top: 5px;
+		left: 0;
+
+	}
+
+	.work-experience .section-content::before{
+		display: none;
+		
+	}
+
+	.work-Fragment .circle-point {
+		display: none;
+	}
+
+
+	.work-Fragment .work-content::after {
+		display: none;
+	}
+
+}
+
+
+
+
+
+
+

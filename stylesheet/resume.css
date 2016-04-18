@@ -1,0 +1,516 @@
+@font-face {
+  font-family: 'iconfont';
+  src: url('//at.alicdn.com/t/font_1455093385_4637263.eot'); /* IE9*/
+  src: url('//at.alicdn.com/t/font_1455093385_4637263.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('//at.alicdn.com/t/font_1455093385_4637263.woff') format('woff'), /* chrome、firefox */
+  url('//at.alicdn.com/t/font_1455093385_4637263.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+  url('//at.alicdn.com/t/font_1455093385_4637263.svg#iconfont') format('svg'); /* iOS 4.1- */
+}
+                    
+
+
+/**START: Gloaal**/
+html{
+   font-size:62.5%;
+}
+html,body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+body{
+	font-family:'Helvetica Neue',Helvetica,'PingFang SC','Hiragino Sans GB','Microsoft YaHei',Arial,sans-serif;	
+}
+
+
+body * {
+    padding:0;
+    margin:0;  
+}
+
+.date-separator::after {
+    content: "|";
+}
+
+/**END: Gloaal**/
+
+/**START: Personal Info**/
+
+div#mainContent {
+    height: 100%;
+}
+
+
+div#resumeContent {
+    background-color: #e9f0f5;
+    height: 100%;
+    padding: 0 50px;
+}
+
+/*
+@media screen and (min-width:1020px) {
+    .info {
+        width: 350px;
+        position: fixed;
+    }
+
+    div#resumeContent {
+        margin-left: 350px;
+    }
+
+    div#resumeContent {
+    padding-left: 100px;
+    padding-top: 80px;
+    padding-right: 50px;
+
+    }
+
+    .info-brief {
+        padding-top: 100px;
+    
+        padding-bottom: 20px;		
+	}
+}
+*/
+
+
+	
+.info-brief {
+    background-color: #2476fb;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+}
+
+
+.info-brief .name {
+    font-size: 2.5rem;
+}
+
+.birth {
+    font-size: 1.5rem;
+    font-weight: normal;
+}
+
+
+
+.info-contact {
+    text-align: left;
+    padding: 20px 0 0 57px;
+    font-size: 1.4rem;
+}
+
+
+.pages-link {
+    font-family: "iconfont" !important;
+    width: 200px;
+    margin: 15px auto 0px auto;
+}
+
+
+
+
+.page-icon-font:hover{
+    background-color: white;
+    color:#47a3da;
+}
+
+a.page-icon-font {
+    width: 2rem;
+    height: 2rem;
+    line-height: 2rem;
+    font-size: 1.8rem;
+    margin-right: 5px;
+    display: inline-block;
+    background-color: #47a3da;
+    color: white;
+    border: 4px solid #47a3da;
+    border-radius: 2rem;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+
+/**END: Personal Info**/
+
+
+
+
+/**START: Work Experience**/
+
+.work-detail {
+    border-top: 1px solid rgba(255,255,255,0.4);
+    padding: 10px 5px;
+    margin-top: 6px;
+}
+
+.work-Fragment .circle-point {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    color: white;
+    font-size: 2.5rem;
+    background-color: #3594cb;
+    position: absolute;
+    left: 20%;
+    margin-left: -25px;
+    border: 4px solid #afdcf8;
+    border-radius: 60px;
+}
+
+.work-content h2 {
+    font-size: 2rem;
+}
+
+.work-content h3 {
+    font-size: 1.6rem;
+    font-weight: normal;
+}
+
+.work-Fragment:nth-child(odd) .work-content,.work-Fragment:nth-child(odd) .circle-point {
+    background-color:#6cbfee;
+}
+
+.work-Fragment .work-content {
+    border-radius: 5px;
+    background-color: #3594cb;
+    color: white;
+    position: relative;
+    padding: 10px 25px;
+    margin-left: 25%;
+    left: 5px;
+}
+
+.work-experience .section-content {
+    border-left-color: #2476fb;
+}
+
+.work-experience .section-content::before {
+    content: '';      
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 10px;
+    background: #afdcf8;      
+    left: 20%;      
+    margin-left: -5px;
+}
+
+
+.work-experience .work-date {
+    top: 0px;
+    left: 0px;
+    height: auto;
+    width: 25%;
+    box-sizing: border-box;
+    padding-right: 100px;
+    position: absolute;
+    color: #6cbfee;
+    text-align: center;
+    font-size: 2rem;
+}
+
+
+.work-Fragment {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.work-Fragment .work-content::after {
+    right: 100%;      
+    border: solid transparent;      
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-right-color: #3594cb;
+    border-width: 10px;
+    top: 10px;
+}
+
+.work-Fragment:nth-child(odd) .work-content::after {
+    border-right-color:#6cbfee
+}
+
+div.work-Fragment:last-child .fragment {
+    margin-bottom: 0;
+}
+
+
+.work-detail ul>li,.fragment-content .fragment-list >ul>li {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+}
+
+/**END: Work Experience**/
+
+/**START: Summary**/
+
+.summary .section-content {
+    padding: 20px 40px;
+    background-color: #47a3da;
+    color: white;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    line-height: 2rem;
+}
+
+/**END: Summary**/
+
+
+/**START: Section**/
+
+
+#resumeContent .section {
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.section-title {
+    margin: 0;
+    /* width: 40px; */
+    font-size: 3rem;
+}
+
+
+.section-content {
+    height: auto;
+    position: relative;
+    margin-top: 10px;
+}
+
+.section .section-title {
+    color: #47a3da;
+}
+.project-experience .section-content {
+    border-left-color: #e7532c;
+}
+
+.timeline-section-content {
+    position: relative;
+}
+
+
+.timeline-section-content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;      
+    width: 3px;      
+    background: #d7e4ed;      
+    left: 8px;      
+}
+/**END: Section**/
+
+
+
+/**START: Fragment**/
+
+.fragment {
+    position: relative;
+    margin-bottom: 20px;
+    padding: 10px 0;
+}
+
+.fragment .fragment-content {
+    padding-top: 10px;
+    color: #7f8c97;
+}
+
+.fragment-summary {
+    font-size: 1.5rem;
+    margin-bottom: 6px;
+}
+
+
+
+.fragment-content-wrapper {
+    position: relative;
+    padding: 10px 25px;
+    margin-left: 39px;
+    background: white;      
+    border-radius: 5px;
+    box-shadow: 0 3px 0 #d7e4ed;
+}
+
+.fragment-content-wrapper::after {
+    right: 100%;      
+    top: 5px;
+    border: solid transparent;      content: " ";      height: 0;      width: 0;      position: absolute;      pointer-events: none;      
+    border-right-color: white;      border-width: 10px;      
+}
+
+.fragment-content .fragment-list {
+    margin: 10px 0px;
+}
+
+
+.fragment-name {
+    display: block;
+    font-size: 2rem;
+    margin-bottom: 5px;
+}
+
+.fragment-comment {
+    display: block;
+    font-size: 1.4rem;
+}
+
+.fragment .circle-point {            
+    width: 10px;
+    height: 10px;
+    top: 18px;
+    border-radius: 10px;
+    border: 4px solid white;                        position: absolute;      color: #6cbfee;      text-align: center;      
+      
+    background-color: #75ce66;
+    color: white;
+}
+
+.fragment-content .date {
+    color: #7f8c97;
+    font-size: 0.875rem;
+}
+
+.points-container ul {
+    align-items: center;
+}
+
+
+
+
+.points-container {
+    padding: 10px 25px;
+    background-color: #47a3da;
+    color: white;
+    border-radius: 5px;
+    font-size: 1.25rem;
+}
+
+.points-container ul>li {
+    line-height: 1.75rem;
+}
+/**END: Fragment**/
+
+
+/**START: Education**/
+
+.education-section .education-exeperience {
+    margin: 10px 0 10px 0;
+    background-color: #dfe7ec;
+    padding: 10px 30px;
+}
+
+.education-section .education-exeperience li {
+    list-style: none;
+    line-height: 200%;
+}
+
+.education-section .section-content {
+    position: relative;
+    padding-bottom: 0px;
+    padding-left: 10px;
+    margin-top: 10px;
+}
+
+
+.gpa {
+    margin: 0;
+    padding: 0 10px;
+    display: inline-block;
+    width: 50%;
+    background-color: #61b1df;
+    box-sizing: border-box;
+    font-size: 1.4rem;
+    color: white;
+    vertical-align: middle;
+}
+
+.major {
+    margin: 10px 15px;
+    display: inline-block;
+    font-weight: bold;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.university {
+    display: inline-block;
+    color: #46a2da;
+    font-weight: bold;
+    font-size: 1.6rem;
+}
+
+.scholarship {
+    display: inline-block;
+    width: 50%;
+    padding-left: 10px;
+    box-sizing: border-box;
+    background-color: #d0d8db;
+    vertical-align: middle;
+}
+
+.education-section .date {
+    display: inline-block;
+}
+
+.edu-content {
+    padding: 10px 0;
+    border-top: 1px dashed #d2dadd;
+}
+
+.score {
+    margin: 0;
+    padding: 0;
+    height: 30px;
+    line-height: 30px;
+}
+
+.study-type {
+    margin-left: 5px;
+    font-weight: bold;
+}
+
+.major-name {
+    margin-right: 5px;
+    font-weight: normal;
+}
+
+/**END: Education**/
+
+
+
+
+
+
+
+div#footer {
+    text-align: center;
+    padding: 10px 0 5px 0;
+    background-color: grey;
+    color: #888;
+    background: linear-gradient(#e0e0e0,#cccccc,#b0b0b0);
+}
+
+div#credit {
+}
+
+#credit a {
+    color: inherit;
+}
