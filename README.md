@@ -27,20 +27,21 @@ python -m SimpleHTTPServer
 
 ###键值说明
 
-key  | 说明 | 类型 | 默认 
-------------- | -------------| ------------- 
+key | 说明 | 类型 | 默认
+------------- | -------------| -------------| -----------
 name | 姓名 | 字符串 | null
 birth | 生日 | 字符串 | null
 tel| 电话 | 字符串 | null
-blog|邮箱 | 字符串 | null 
+blog|邮箱 | 字符串 | null
 blog|博客地址 | 字符串 | null
-avatar|头像地址 | 字符串 | "/image/avatar.jpg"
+avatar|头像地址 | 字符串 | xxxxxx
 pages|个人主页链接 | 数组 | []
 summary|概况 | 数组 | []
-workExperience| 数组 | 字符串 | []
-projectExperience| 数组 | 字符串 | []
+workExperience| 工作经历| 字符串 | []
+projectExperience| 项目 | 字符串 | []
 sections|其他需要额外添加的经历/段落 | 数组 | []
 educations|教育经历 | 数组 | []
+
 
 ###个人主页配置
 
