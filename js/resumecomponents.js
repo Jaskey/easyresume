@@ -16,9 +16,9 @@
 
 			render:function(){
 
-				var cSumary = <Summary key="summary-section" summary = {this.props.json.summary}/>;//概览模块
-				var cWork = <Work key="work-section" workExperience = {this.props.json.workExperience}/>//工作模块
-				var cProject = <ProjectExperience key="project-section" projectExperience = {this.props.json.projectExperience}/>//项目经验
+				var cSumary = <Summary key="summary-section" summaries = {this.props.json.summaries}/>;//概览模块
+				var cWork = <Work key="work-section" workExperiences = {this.props.json.workExperiences}/>//工作模块
+				var cProject = <ProjectExperience key="project-section" projectExperiences = {this.props.json.projectExperiences}/>//项目经验
 				var cOtherSection = <OtherSections key="other-section" sections={this.props.json.sections}/>//其他模块
 				var cCourse = <Course key="course-section" courses={this.props.json.courses}/>//课程
 				var cEdu = <Educations key="education-section" educations={this.props.json.educations}/>;//教育经历
@@ -38,7 +38,7 @@
 							{/*简历主内容*/}
 							{comps}
 						</div>
-						<div id="footer"><div id="credit">Powered by <a href="#">easyresume</a></div></div>{/*水印*/}
+						<div id="footer"><div id="credit">Powered by <a href="https://github.com/jaskey/easyresume/">easyresume</a></div></div>{/*水印*/}
 					</div>
 				)
 			},
@@ -131,14 +131,16 @@
 		var Summary = React.createClass({
 			getDefaultProps:function(){
 				return {
-					summary:[]
+					summaries:[]
 				}
 			},			
 			render:function(){
-				var summary = this.props.summary;
+				var summaries = this.props.summaries||[];
+				if(summaries.length===0) return false;
+				
 				var lis = [];
-				for(var i=0;i<summary.length;i++){
-					lis.push(<li key={"summary-paragrph"+i}>{summary[i]}</li>);
+				for(var i=0;i<summaries.length;i++){
+					lis.push(<li key={"summary-paragrph"+i}>{summaries[i]}</li>);
 				};
 
 				return (
@@ -156,28 +158,18 @@
 				
 		});
 		
-		
+		//工作经历模块
 		var Work = React.createClass({
 			getDefaultProps:function(){
-				workExperience:[]
+				workExperiences:[]
 			},
 			
 			render:function(){
-				var ex=[];//工作经历
-				var workExperience = this.props.workExperience;
+				var ex=[];//工作经历components
+				var workExperiences = this.props.workExperiences||[];
 				
-				for(var i =0;i<workExperience.length;i++){
-					var we = workExperience[i]
-					var fragmentOption={
-						name:we.company,
-						comment:we.post,
-						startDate:we.startDate,
-						endDate:we.endDate,
-						summary:we.summary,
-						detail:we.detail
-					};
-					//<Fragment option={fragmentOption}/>
-					//console.log(we,"companyLogo: ",we.companyLogo)
+				for(var i =0;i<workExperiences.length;i++){
+					var we = workExperiences[i];//TODO empty 处理
 					var work = 
 								<div key={"work-experience_"+i} className="work-Fragment">
 									<div className="work-date">
@@ -197,10 +189,11 @@
 										<div className="work-detail">
 											<ul>
 												{
-													we.detail.map(function(e,i){return <li key={"work-detail_"+we.company+"_"+we.post+i}>{e}</li>})
+													we.details.map(function(e,i){return <li key={"work-detail_"+we.company+"_"+we.post+i}>{e}</li>})
 												}
 											</ul>
 										</div>
+
 									</div>
 								</div>;
 
@@ -221,23 +214,25 @@
 		
 		var ProjectExperience = React.createClass({
 			getDefaultProps:function(){
-				projectExperience:[]
+				projectExperiences:[]
 			},
 			
 			render:function(){
-			
+				var projectExperiences = this.props.projectExperiences||[];
+				if(projectExperiences.length===0) return false;
+
 				var ex=[];
-				
-				var projectExperience = this.props.projectExperience;
-				for(var i =0;i<projectExperience.length;i++){
-					var pe = projectExperience[i]
+				for(var i =0;i<projectExperiences.length;i++){
+					var pe = projectExperiences[i]
+					
+					//一段项目经历Fragment的option
 					var fragmentOption={
 						name:pe.projectName,
 						comment:pe.role,
 						startDate:pe.startDate,
 						endDate:pe.endDate,
 						summary:pe.summary,
-						detail:pe.detail
+						details:pe.details
 					}		
 					
 					var project = 
@@ -247,6 +242,7 @@
 					ex.push(project);
 				}
 			
+
 				return (
 					<div className=" section project-experience">
 						<h3 className="section-title">项目经历</h3>

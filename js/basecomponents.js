@@ -7,7 +7,7 @@
 						startDate:'',
 						endDate:'',
 						summary:'',
-						detail:[]
+						details:[]
 					}
 				}
 			},
@@ -39,7 +39,7 @@
 										{_summaryComp}
 										<div className="fragment-list">
 											<ul>
-												{frag.detail.map(function(e,i){return <li key={"frament_"+i}>{e}</li>})}
+												{frag.details.map(function(e,i){return <li key={"frament_"+i}>{e}</li>})}
 											</ul>
 										</div>
 										
