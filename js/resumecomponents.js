@@ -38,7 +38,7 @@
 							{/*简历主内容*/}
 							{comps}
 						</div>
-						<div id="footer"><div id="credit">Powered by <a href="https://github.com/jaskey/easyresume/">easyresume</a></div></div>{/*水印*/}
+						<div id="footer"><div id="credit">Powered by <a href="https://github.com/jaskey/easyresume/" target="_blank" >EasyResume</a></div></div>{/*水印*/}
 					</div>
 				)
 			},
@@ -137,7 +137,7 @@
 			render:function(){
 				var summaries = this.props.summaries||[];
 				if(summaries.length===0) return false;
-				
+
 				var lis = [];
 				for(var i=0;i<summaries.length;i++){
 					lis.push(<li key={"summary-paragrph"+i}>{summaries[i]}</li>);

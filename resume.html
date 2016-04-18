@@ -68,6 +68,9 @@
 			console.log('[resume.json read successfully]',data);
 			var json = data;
 			React.render(<div><Resume  json={json}/></div>,document.getElementById('container'));
+
+			var name = json.name;
+			if(name) document.title='EasyResume-'+name;
 		});
 
 		//一秒后显示默认的提示区域，如果正常初始化，$('#defaultMsg')将不存在，故没有作用
