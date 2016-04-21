@@ -140,7 +140,7 @@ a.page-icon-font {
 
 /**START: Work Experience**/
 
-.work-detail {
+.work-experience-content {
     border-top: 1px solid rgba(255,255,255,0.4);
     padding: 10px 5px;
     margin-top: 6px;
@@ -513,4 +513,9 @@ div#credit {
 
 #credit a {
     color: inherit;
+}
+
+.work-summary {
+    font-size: 1.4rem;
+    margin-bottom: 6px;
 }

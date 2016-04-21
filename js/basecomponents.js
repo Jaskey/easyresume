@@ -1,4 +1,4 @@
-﻿		var Fragment = React.createClass({
+﻿		window.Fragment = React.createClass({
 			getDefaultProps:function(){
 				return {
 					option:{
@@ -56,7 +56,7 @@
 		/**
 		一整块区域，一个section下面每一段子区域为Fragment
 		**/
-		var Section = React.createClass({
+		window.Section = React.createClass({
 			getDefaultProps:function(){
 				return {
 					title:"sectionTitle",

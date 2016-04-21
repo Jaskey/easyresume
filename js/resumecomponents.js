@@ -1,4 +1,4 @@
-﻿		var Resume = React.createClass({
+﻿		window.Resume = React.createClass({
 			getDefaultProps:function (){
 				console.log('[Resume][getDefaultProps]');
 				return {
@@ -87,12 +87,13 @@
 						
 						//console.log("page=",page," icon-font:",iconfontKeymap[page]);
 						//console.log(React.findDOMNode(this.refs.iconFontSpan));
-						$(React.findDOMNode(this.refs.iconFontSpan)).html(iconfontKeymap[page]);
-						}
+						$(React.findDOMNode(this.refs.iconFontSpan)).html(iconfontKeymap[page]);//react 13
+						//$(this.refs.iconFontSpan).html(iconfontKeymap[page]);//react 15
+					}
 				}
 			}());
 		
-		var Info  = React.createClass({
+		window.Info  = React.createClass({
 			getDefaultProps:function(){
 				return {
 					name:null,
@@ -128,7 +129,7 @@
 			},
 		});
 		
-		var Summary = React.createClass({
+		window.Summary = React.createClass({
 			getDefaultProps:function(){
 				return {
 					summaries:[]
@@ -159,7 +160,7 @@
 		});
 		
 		//工作经历模块
-		var Work = React.createClass({
+		window.Work = React.createClass({
 			getDefaultProps:function(){
 				workExperiences:[]
 			},
@@ -186,12 +187,21 @@
 										<h2>{we.company}</h2>
 										<h3>{we.post}</h3>
 										
-										<div className="work-detail">
-											<ul>
-												{
-													we.details.map(function(e,i){return <li key={"work-detail_"+we.company+"_"+we.post+i}>{e}</li>})
-												}
-											</ul>
+
+
+										<div className="work-experience-content">
+											{
+												function(we){
+													return we.summary?<div className="work-summary">{we.summary}</div>:null
+												}(we)
+											}
+											<div className="work-detail">
+												<ul>
+													{
+														we.details.map(function(e,i){return <li key={"work-detail_"+we.company+"_"+we.post+i}>{e}</li>})
+													}
+												</ul>
+											</div>
 										</div>
 
 									</div>
@@ -212,7 +222,7 @@
 		});
 		
 		
-		var ProjectExperience = React.createClass({
+		window.ProjectExperience = React.createClass({
 			getDefaultProps:function(){
 				projectExperiences:[]
 			},
@@ -255,7 +265,7 @@
 		
 
 		
-		var OtherSections = React.createClass({
+		window.OtherSections = React.createClass({
 			getDefaultProps:function(){
 				return {
 					sections:[]
@@ -279,7 +289,7 @@
 			
 		});
 		
-		var Course  =  React.createClass({
+		window.Course  =  React.createClass({
 			getDefaultProps:function(){
 				return {
 					courses:[]
@@ -307,7 +317,7 @@
 			}
 		});
 		
-		var Educations = React.createClass({
+		window.Educations = React.createClass({
 		
 			getDefaultProps:function(){
 				return {
