@@ -85,10 +85,8 @@
 							break;
 						}
 						
-						//console.log("page=",page," icon-font:",iconfontKeymap[page]);
-						//console.log(React.findDOMNode(this.refs.iconFontSpan));
-						$(React.findDOMNode(this.refs.iconFontSpan)).html(iconfontKeymap[page]);//react 13
-						//$(this.refs.iconFontSpan).html(iconfontKeymap[page]);//react 15
+						//$(React.findDOMNode(this.refs.iconFontSpan)).html(iconfontKeymap[page]);//react 13
+						$(this.refs.iconFontSpan).html(iconfontKeymap[page]);//react 15
 					}
 				}
 			}());
