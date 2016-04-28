@@ -59,7 +59,7 @@ summary|概览 | 字符串 | YES | YES
 details|经历详情|数组 | YES
 
 
-###工作经历
+###项目经历
 
 key: `projectExperiences`
 
@@ -122,9 +122,9 @@ wechat| 微信
 lofter| Lofter
 weibo| 新浪微博
 
-## Donations
+## 打赏一块几毛
 
-
+如果EasyResume帮助到你找工作了，打赏几毛呗。支付宝帐号：120681430@qq.com
 
 ## License
 Available under [the MIT license](http://mths.be/mit).
