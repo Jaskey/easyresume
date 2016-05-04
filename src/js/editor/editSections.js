@@ -46,8 +46,10 @@
 										})
 								
 										:
-										<ArrayInput label="points" jsonKey="points" values={section.points}
+										<div className="block-wrapper">
+											<ArrayInput label="" jsonKey="points" values={section.points}
 													onValueChange={this.handlePointChange}/>
+										</div>
 									
 											
 								}

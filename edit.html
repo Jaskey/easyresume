@@ -66,17 +66,11 @@
 	<script type="text/babel">
 
 		var json ={}
-
-
-
-
-
-
-
+		
 		//preview
-		$.getJSON("resume.json",[],function(data){
+		$.getJSON("demo.json",[],function(data){
 			console.log('[resume.json read successfully]',data);
-			json = data;//from resume.json
+			json = data;//from demo.json
 			var editor = ReactDOM.render(<div><Editor json={json}/></div>,document.getElementById('sliderBar'));	
 			ReactDOM.render(<div><Resume  json={json}/></div>,document.getElementById('container'));
 		});

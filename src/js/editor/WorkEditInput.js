@@ -25,7 +25,7 @@
 					var json = this.props.json;
 					return (
 						<div>								
-							<div className="input-wrapper">						
+							<div className="block-wrapper">						
 									<StringInput jsonKey="company" editor={this.props.editor} label="公司" value={json.company} 
 										index = {this.props.index}
 										workComponent = {this}

@@ -119,25 +119,30 @@
 								{/*个人信息*/}
 								<div id="editInfo" className="edit-section">
 									<div className="header">个人信息</div>
-									<StringInput jsonKey="name" editor={this} label="姓名" value={this.state.json.name} 
-										onValueChange={self.handleInfoChange}/>
-									<StringInput jsonKey="birth" editor={this} label="生日" value={this.state.json.birth}
-										onValueChange={self.handleInfoChange}/>
-									<StringInput jsonKey="email" editor={this} label="邮箱" value={this.state.json.email}
-										onValueChange={self.handleInfoChange}/>							
-									<StringInput jsonKey="tel"  editor={this} label="电话" value={this.state.json.tel}
-										onValueChange={self.handleInfoChange}/>
-									<StringInput jsonKey="blog" editor={this}  label="博客" value={this.state.json.blog}
-										onValueChange={self.handleInfoChange}/>
-									<StringInput jsonKey="avatar" editor={this}   label="头像" value={this.state.json.avatar}
-										onValueChange={self.handleInfoChange}/>
+									<div className="block-wrapper">
+										<StringInput jsonKey="name" editor={this} label="姓名" value={this.state.json.name} 
+											onValueChange={self.handleInfoChange}/>
+										<StringInput jsonKey="birth" editor={this} label="生日" value={this.state.json.birth}
+											onValueChange={self.handleInfoChange}/>
+										<StringInput jsonKey="email" editor={this} label="邮箱" value={this.state.json.email}
+											onValueChange={self.handleInfoChange}/>							
+										<StringInput jsonKey="tel"  editor={this} label="电话" value={this.state.json.tel}
+											onValueChange={self.handleInfoChange}/>
+										<StringInput jsonKey="blog" editor={this}  label="博客" value={this.state.json.blog}
+											onValueChange={self.handleInfoChange}/>
+										<StringInput jsonKey="avatar" editor={this}   label="头像" value={this.state.json.avatar}
+											onValueChange={self.handleInfoChange}/>
+									</div>
+
 								</div>		
 								
 								{/*概览*/}
 								<div id="editSummaries" className="edit-section">
-									<ArrayInput jsonKey="summaries" editor={this} label="概述" values={this.state.json.summaries}
-										onValueChange ={self.handleSummaryChange}
-									/>
+									<div className="block-wrapper">
+										<ArrayInput jsonKey="summaries" editor={this} label="概述" values={this.state.json.summaries}
+											onValueChange ={self.handleSummaryChange}
+										/>
+									</div>
 								</div>
 
 								{/*工作经历*/}
@@ -180,11 +185,13 @@
 													}
 											}(projectIndex)
 
-											return <ProjectEditInput 
+											return 	<ProjectEditInput 
 														key={"project-"+projectIndex} 
 														index={projectIndex}
 														json={json}
-														onProjectChange={onProjectChange}/>
+														onProjectChange={onProjectChange}
+														/>
+													
 										})
 									}									
 								</div>

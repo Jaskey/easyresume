@@ -30,7 +30,7 @@
 						var self =this;
 						var json = this.props.json;
 						return (
-							<div>								
+							<div className="block-wrapper">								
 								<div className="input-wrapper">						
 										<StringInput 
 											label="项目名称"

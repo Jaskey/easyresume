@@ -38,7 +38,7 @@
 						var self =this;
 						var json = this.props.json;
 						return (
-							<div>								
+							<div className="block-wrapper">								
 								<div className="input-wrapper">						
 										<StringInput 
 											label={json.nameLabel||'主标题'}

@@ -24,12 +24,13 @@
 					//var prop = this.getProps();
 					var props = this.props;
 					return (
-						<div>								
+						<div className="input-wrapper array-wrapper">								
 								<div className="label">{this.props.label}</div>
+								<div className="array-input">
 								{
 									props.values.map(function(e,i){
 										return 	(	
-											<div className="input-wrapper" 
+											<div 
 												key={"array_"+self.props.jsonKey+i}>						
 												<input type="text"
 													ref={"arrayBox"+i}
@@ -41,6 +42,7 @@
 										)
 									})
 								}
+								</div>
 
 
 						</div>
