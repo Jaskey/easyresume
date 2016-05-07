@@ -1,6 +1,6 @@
 # EasyResume
 
-EasyResume简单的使用一个json文件，配置属于你的简历的内容，便能生成一个样式美观整齐的HTML页面，点击查看[demo](http://jaskey.github.io/resume/resume.html "例子")
+EasyResume简单的使用一个json文件，配置属于你的简历的内容，便能生成一个样式美观整齐的HTML页面。
 
 ------------
 ##Demo
