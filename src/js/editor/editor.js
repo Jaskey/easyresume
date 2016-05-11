@@ -87,7 +87,7 @@
 					console.log('handleDownload');
 					var json = this.getEditorJSON();
 
-					var data = "text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(json));
+					var data = "text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(json,0,4));
 					var a = document.createElement('a');
 					a.href = 'data:' + data;
 					a.download = 'resume.json';
