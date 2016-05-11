@@ -5,7 +5,7 @@ EasyResume简单的使用一个json文件，配置属于你的简历的内容，
 ------------
 ##Demo
 
-[demo](http://jaskey.github.io/easyresume/jaskey.html "例子")
+[查看demo](http://jaskey.github.io/easyresume/jaskey.html "例子")
 
 [在线编辑器(部分功能)](http://jaskey.github.io/easyresume/edit.html "在线编辑")
 
@@ -26,7 +26,7 @@ python -m SimpleHTTPServer
 
 ## 配置JSON
 
-注：建议使用[在线编辑器(部分功能)](http://jaskey.github.io/easyresume/edit.html "在线编辑")下载后（注意[格式化](http://tool.oschina.net/codeformat/json)）再手动调整.
+注：建议使用[在线编辑器(部分功能)](http://jaskey.github.io/easyresume/edit.html "在线编辑")下载后，再手动调整.
 
 ###键值说明
 
