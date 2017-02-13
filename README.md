@@ -55,7 +55,7 @@ key | 说明 | 类型 | 默认
 name | 姓名 | 字符串 | null
 birth | 生日 | 字符串 | null
 tel| 电话 | 字符串 | null
-blog|邮箱 | 字符串 | null
+email|邮箱 | 字符串 | null
 blog|博客地址 | 字符串 | null
 avatar|头像地址 | 字符串 | "/image/avatar.jpg"
 pages|个人主页链接 | 数组 | []
@@ -112,7 +112,7 @@ startDate|项目开始日期 | 字符串 | NO
 endDate|项目结束日期 | 字符串 | NO
 gpa|绩点 | 字符串 | YES
 scholarships|奖学金 | 字符串数组 | YES | YES
-experiences|项目详情|字符串数组 | YES
+experiences|校园经历详情|字符串数组 | YES
 
 
 ###个人主页配置
