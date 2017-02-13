@@ -14,22 +14,24 @@ EasyResume简单的使用一个json文件，配置属于你的简历的内容，
 
 1. fork 项目
 2. 为项目开启github page
-
 3. 克隆fork后在个人名下的项目：`git clone https://github.com/YourGithubName/easyresume.git`
-
 4. 修改`resume.json`文件，里面是简历的内容。可使用[在线编辑器(部分功能)](http://jaskey.github.io/easyresume/edit.html "在线编辑")在线编辑简单的模版后，再手动调整。
-
 5. 提交代码并推上仓库
+
+推仓库命令示意：
    
-   git add resume.json
-   git commit -m "resume init"
-   git push origin 
+    git add resume.json
+    git commit -m "resume init"
+    git push origin 
+
 
 ## 在线访问： 
-访问仓库的github page即可：https://github.com/YourGithubName/easyresume
+
+访问仓库的github page即可：https://yourgithubName.github.io/easyresume
 
 
 ## 本地预览
+
 在推仓库前若想本地预览，需要一个布HTTP服务器，在HTTP服务下查看index.html，使用python可以简单地使用：
 
 
