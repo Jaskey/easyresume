@@ -1,150 +1,217 @@
 {
-    "name": "成旭源",
-    "birth": "11.03",
-    "tel": "136606xxxxxx",
-    "email": "linjunjie1103@gmail.com(作者邮箱，可联系)",
-    "blog": "http://blog.github.io",
-    "avatar": "image/avatar.jpg",
-    "pages": [],
-    "summaries": [
-        "熟练Java、Javascript、掌握Android开发，SQL、PL/SQL；用过C、C#、VBA等其他编程语言。",
-        "掌握Spring、Spring MVC、Struts2、Hibernate、Play!；熟悉jQuery、掌握ExjJS、jQuery Mobile前端框架。",
-        "熟悉并能应用面向对象设计原则、掌握多种设计模式，熟悉Java多线程、同步模型，了解分布式架构。",
-        "突出的学习能力和学习热情，能自学MOOC课程并已完成3门证书；擅用文档、StackOverflow学习技术。"
-    ],
-    "workExperiences": [
-        {
-            "company": "大腿公司",
-            "companyLogo": "image/neteasegame.png",
-            "post": "高级软件工程师",
-            "startDate": "2015.01",
-            "endDate": "至今",
-            "summary": "使用Java、JavaScript开发网易游戏数据平台（有数），供百余款游戏提供可视化数据分析。",
-            "details": [
-                "整个系统前端交互、视觉迭代、前端重构等主要负责人；国际化、pjax局部刷新、权限管理、页面布局开发者。",
-                "完成多个专题页面：多游戏产品概览、运营报表、梦幻手游物品产销、镇魔曲实时数据分析、开测对比、付费专题、留存专题、服务器分析、武魂战斗力分析专题等。新专题页面使平台活跃/新增用户均增加约100%。"
-            ]
-        },
-        {
-            "company": "小牛公司",
-            "companyLogo": "image/oracle.png",
-            "post": "软件工程师",
-            "startDate": "2013.07",
-            "endDate": "2015.01",
-            "summary": "开发并维护Oracle EBS（电子商务套件）资产管理系统，为全球客户（如Facebook、华为）提供系统研发支持。",
-            "details": [
-                "维护代码量千万级别的Java和PL/SQL代码，对系统进行新功能开发、对100多张数据库表进行数据维护。",
-                "平均每月完成10个，最高20个（KPI 4-6个）新功能/Bug fix；为全球客户开发了100多个客户功能补丁。"
-            ]
-        }
-    ],
-    "projectExperiences": [
-        {
-            "projectName": "网易游戏数据分析系统",
-            "role": "主要开发成员",
-            "startDate": "2015.01",
-            "endDate": "2016.04",
-            "summary": "",
-            "details": [
-                "页面交互、视觉迭代主要负责人；页面导航结构开发者；编写多个通用性前端控件、数据交互、工具类函数。",
-                "使用Java+JS开发十余个数据可视化页面：运营报表、付费专题、留存专题等、用研团队工具十余个模块。",
-                "编写Python脚本进行MySQL部分页面文件配置转换、日志数据解析等工作。"
-            ]
-        },
-        {
-            "projectName": "One Menu",
-            "role": "兼职开发",
-            "startDate": "2015.08",
-            "endDate": "2015.11",
-            "summary": "为美国创业者开发One Menu（美国O2O外卖订餐App）服务段接口；使用Github、Trello协作。",
-            "details": [
-                "使用Spring MVC , Hibernate开发购物车，优惠券相关的数十个后端接口供前端数据获取。",
-                "设计并实现使用责任链+空对象设计模式，处理多优惠劵条件判断、价格计算等逻辑。"
-            ]
-        },
-        {
-            "projectName": "Oracle EBS",
-            "role": "主要成员",
-            "startDate": "2012.11",
-            "endDate": "2013.04",
-            "summary": "与美国、印度研发团队合作，对Oracle EBS(电子商务套件)资产管理（EAM）系统进行新功能开发，系统维护。",
-            "details": [
-                "同时对系统4个版本中业务最复杂的工单、预测维修、报告分析等模块进行新功能开发、代码维护、数据修复。",
-                "与团队一高级工程师一同负责最新子模块线性资产（LAM）的事件服务、REST接口代码开发工作。",
-                "采用MVC模式，使用Java+OAF框架进行Web开发，PL/SQL进行数据验证以及业务逻辑的实现。"
-            ]
-        }
-    ],
-    "sections": [
-        {
-            "title": "开发小工具",
-            "fragments": [
-                {
-                    "name": "微信公众号测试客户端",
-                    "comment": "",
-                    "startDate": "",
-                    "endDate": "",
-                    "summary": "完成发送HTTP测试数据并解析响应数据的功能测试Swing客户端，大大提高复杂逻辑的公众号功能测试效率。",
-                    "details": []
-                },
-                {
-                    "name": "火狐搜索插件",
-                    "comment": "",
-                    "startDate": "",
-                    "endDate": "",
-                    "summary": "独立编写快速搜索小插件，使用Spring MVC+HttpClient完成搜索推荐（如热门微博）的数据格式适配。",
-                    "details": []
-                }
-            ]
-        },
-        {
-            "title": "培训经历",
-            "fragments": [
-                {
-                    "name": "甲骨文人才发展中心",
-                    "comment": "2013校招培训项目",
-                    "startDate": "2013.09",
-                    "endDate": "2013.12",
-                    "summary": "",
-                    "details": [
-                        "校招深圳研发中心B组组长，第一届甲骨文编程马拉松中获带领小组获项目“创新奖”，本人获“优秀小组长"
-                    ]
-                },
-                {
-                    "name": "甲骨文大学",
-                    "comment": "技术培训",
-                    "startDate": "2013.7",
-                    "endDate": "2013.9",
-                    "summary": "参与甲骨文大学(对外)Java7 、SQL、PL/SQL、Oracle Application Framework（OAF）等7门技术培训课程。",
-                    "details": []
-                }
-            ]
-        },
-        {
-            "title": "英语能力",
-            "points": [
-                "无障碍阅读原版技术书籍、文档、StackOverflow",
-                "能与跨国团队协作",
-                "英语六级、剑桥商务英语国际证书。"
-            ]
-        }
-    ],
-    "educations": [
-        {
-            "university": "华南农业大学",
-            "studyType": "本科",
-            "major": "软件工程",
-            "startDate": "2009.07",
-            "endDate": "2013.07",
-            "gpa": "3.93/5.00",
-            "scholarships": [
-                "二等奖学金"
+            "name":"林俊杰",
+            "birth":"11.03",
+            "tel":"1366060****",
+            "email":"linjunjie1103@gmail.com",
+            "blog":"http://jaskey.github.io",
+            "avatar":"image/jaskey.jpg",
+            "pages":[
+                {"zhihu":"http://www.zhihu.com/people/linjunjie1103"},
+                {"stackoverflow":"http://stackoverflow.com/users/2087628/jaskey"},
+                {"github":"https://github.com/Jaskey"},
+                {"linkedin":"http://www.linkedin.com/in/jaskeylam/zh-cn?locale=zh_CN&trk=profile_view_lang_sel_click"},
+                {"douban":"http://www.douban.com/people/linjunjie1103/"}
             ],
-            "experiences": [
-                "英语口语协会会长，信息技术中心常务部副部长，软件学院助理班主任",
-                "社团类荣誉：2010年度华南农业大学“优秀团干部”、2009年度华南农业大学“优秀团员”",
-                "实践类荣誉：2010亚运会志愿服务“志愿者先进个人”、“突出贡献奖”、第四届“新鲜人”才艺大赛二等奖"
-            ]
-        }
-    ]
+            "summaries":[
+                "熟练Java、Javascript、掌握Android开发，SQL、PL/SQL；用过C、C#、VBA等其他编程语言。",
+                "深谙面向对象设计原则、掌握多种设计模式并能自如应用于日常开发；熟悉 Java 多线程、同步模型。",
+                "熟悉分布式架构，有高可用、高并发场景下架构设计、开发的经验。",
+                "分布式消息中间件RocketMQ代码贡献者之一；在Apache开源社区提出过几个新特性需求并已采纳；活跃解答RocketMQ社区问题。",
+                "掌握 Spring、Spring MVC、Struts2、Hibernate、Play!；用过 jQuery、ReactJS等前端框架。",
+                "突出的学习能力和学习热情，在 MOOC 课程完成 3 门证书；善利用文档、StackOverflow 解决问题。",
+                "擅用重构手段，有代码洁癖，把代码的“可维护性”和“可读性”置于首位；代码质量曾被多家大型互联网公司领导赞扬。",
+                "极度热爱互联网，对用户体验、互联网思维有独立的思考。渴望从事互联网相关工作。"
+            ],
+            "workExperiences":[
+                {
+                    "company":"微众银行",
+                    "post":"基础架构平台软件工程师",
+                    "startDate":"2016.05",
+                    "endDate":"至今",
+                    "summary":"参与微众银行自研的消息中间件——WeMQ的研发工作；参与微众分布式调用服务框架——RMB的新版本开发",
+                    "details":[
+                        "开发微众银行可靠消息总线（RMB）的新特性、协助业务定位生产故障。",
+                        "参与设计、开发微众银行自研的消息中间件WeMQ，目标是提供金融级别可靠性的消息存储、转发服务。",
+                        "进行Code Review、管理测试人员，管理RMB及WeMQ的测试工作和部分新特性开发。",
+                        "入职半年后，第一年年终绩效考核获A。"
+                    ]       
+                },
+                {
+                    "company":"网易游戏",
+                    "post":"高级软件工程师",
+                    "startDate":"2015.01",
+                    "endDate":"2016.05",
+                    "summary":"使用Java、JavaScript开发网易游戏数据平台（有数），供百余款游戏提供可视化数据分析。",
+                    "details":[
+                        "整个系统前端交互、视觉迭代、前端重构等主要负责人；国际化、pjax局部刷新、权限管理、页面布局开发者。",
+                        "完成多个专题页面：多游戏产品概览、运营报表、梦幻手游物品产销、镇魔曲实时数据分析、开测对比、付费专题、留存专题、服务器分析、武魂战斗力分析专题等。新专题页面使平台活跃/新增用户均增加约100%。",
+                        "PromeData项目的开发者，提供玩家标签数据REST服务接口，供游戏产品查询如玩家消费、登录、性别等标签。",
+                        "获2015 Q4里程碑奖；绩效考核中被被组长评价为“团队代码质量、规范、结构最好之人”；"
+                    ]       
+                },
+                {
+                    "company":"甲骨文",
+                    "post":"软件工程师",
+                    "startDate":"2013.07",
+                    "endDate":"2015.01",
+                    "summary":"开发并维护Oracle EBS（电子商务套件）资产管理系统，为全球客户（如Facebook、华为）提供系统研发支持。",
+                    "details":[
+                        "维护代码量千万级别的Java和PL/SQL代码，对系统进行新功能开发、对100多张数据库表进行数据维护。",
+                        "FY14财年组内开发效率、绩效最高者之一：绩效被经理评价为“达到Senior级别”",
+                        "平均每月完成10个，最高20个（KPI 4-6个）新功能/Bug fix；为全球客户开发了100多个客户功能补丁。"
+                    ]       
+                },
+                {
+                    "company":"UC浏览器",
+                    "post":"软件工程师(实习)",
+                    "startDate":"2012.11",
+                    "endDate":"2013.04",
+                    "summary":"任系统支撑组开发实习生；使用Java，Play!+ExtJS框架开发UC平台系统，供4个城市4000余名员工使用。",
+                    "details":[
+                        "使用Play!和ExtJS框架实现事务督办系统的在对事件的条件设定、按提醒条件发送邮件等第一版本所有功能。",
+                        "使用Java独立完成了会议管理系统1.10中会议室算法推荐、加载会议室平面图等版本的所有功能。"
+                    ]       
+                }           
+            ],
+            "projectExperiences":[
+                {
+                    "projectName":"微众银行自研消息中间件（WeMQ）",
+                    "role":"核心设计&研发成员",
+                    "startDate":"2016.05",
+                    "endDate":"至今",
+                    "summary":"WeMQ是基于RocketMQ深度改造的符合金融可靠性的分布式消息中间件。目标是兼容已有的RMB协议，以实现行内所有业务无缝地从原商业中间件（solace）切换过来。",
+                    "details":[
+                        "参与设计并开发其中核心模块、快速定位生产问题、核心关键问题源码分析并现象解释（如消息存储效率）、review代码，管理测试进度等。",
+                        "设计并开发出基于异步消息的异步转同步的可靠RPC RR（Request/Response）调用。供银行业务实现联机交易服务。",
+                        "消费者实例端针对服务级别的消费流控保护；增加分发队列，实现了消费者消费过慢时unAck保护，并防止线程资源被故障服务独占。",
+                        "对于流式消费，解决由于单点消费过慢而卡住消费进度，从而避免原先潜在的大量消费重复问题。设计实现使用了装饰器设计模式。",
+                        "动态消费队列扩容。在消费端动态增加实例而超过Consume Queue数量时，原实现会出现消费者空载的情况。设计实现动态增加消费队列，避免消费队列数量不足而导致新增加的消费实例无法参与负载均衡。",
+                        "实现消息不确定状态下的重发；设计消息去重数据结构；",
+                        "客户端消费参数支持配置化。实现使用了模版方法模式和单例模式。",
+                        "Broker端性能压测，GC参数调优。"
+                    ]       
+                },
+                {
+                    "projectName":"微众银行可靠消息总线（RMB）",
+                    "role":"主力研发成员",
+                    "startDate":"2016.05",
+                    "endDate":"至今",
+                    "summary":"微众银行第一个项目，是一套基于Solace消息中间件的，实现分布式联机交易的框架，以松耦合方式支持业务水平扩展，故障摘除等，是微众去IOE的架构支撑基础。",
+                    "details":[
+                        "以埋点的方式，开发RMB远程服务调用的指标监控——如成功率、失败率、耗时等，实现预警、服务调用链梳理等功能。",
+                        "利用续费策略优化查询GSL（微众银行的服务定位服务）的缓存策略，提高对于GSL异常场景下的RMB服务的可靠性。",
+                        "实现RMB对于Solace Queue shutdown后的重连，解决RMB服务由于人为误操作而无法恢复的问题。",
+                        "基于WeMQ开发全新的RMB实现版本，兼容所有已有协议及接口，目标是使用白名单灰度的方式逐步从原Solace无缝切换到WeMQ。"
+                    ]       
+                },
+                {
+                    "projectName":"网易游戏数据分析系统",
+                    "role":"主要开发成员",
+                    "startDate":"2015.01",
+                    "endDate":"2016.04",
+                    "summary":"",
+                    "details":[
+                        "页面交互、视觉迭代主要负责人；页面导航结构开发者；编写多个通用性前端控件、数据交互、工具类函数。",
+                        "使用Java+JS开发十余个数据可视化页面：运营报表、付费专题、留存专题等、用研团队工具十余个模块。",
+                        "使用Spring MVC，Thrift创建PromeData项目提供数据标签的REST服务。",
+                        "编写Python脚本进行MySQL部分页面文件配置转换、日志数据解析等工作。"
+                    ]       
+                },
+                {
+                    "projectName":"EasyResume(github.com/jaskey/easyresume)",
+                    "role":"个人开源项目",
+                    "startDate":"2016.03",
+                    "endDate":"2016.04",
+                    "summary":"使用JSON配置内容，快速生成简历。支持自定义简历各个模块，提供在线编辑功能。",
+                    "details":[
+                        "使用ReactJS定义简历各部分组件；CSS样式支持响应式布局。"
+                    ]       
+                },
+                {
+                    "projectName":"One Menu",
+                    "role":"兼职开发",
+                    "startDate":"2015.08",
+                    "endDate":"2015.11",
+                    "summary":"为美国创业者开发One Menu（美国O2O外卖订餐App）服务段接口；使用Github、Trello协作。",
+                    "details":[
+                        "使用Spring MVC , Hibernate开发购物车，优惠券相关的数十个后端接口供前端数据获取。",
+                        "设计并实现使用责任链+空对象设计模式，处理多优惠劵条件判断、价格计算等逻辑。"
+                    ]       
+                },
+                
+                {
+                    "projectName":"Oracle EBS",
+                    "role":"主要成员",
+                    "startDate":"2012.11",
+                    "endDate":"2013.04",
+                    "summary":"与美国、印度研发团队合作，对Oracle EBS(电子商务套件)资产管理（EAM）系统进行新功能开发，系统维护。",
+                    "details":[
+                        "同时对系统4个版本中业务最复杂的工单、预测维修、报告分析等模块进行新功能开发、代码维护、数据修复。",
+                        "与团队一高级工程师一同负责最新子模块线性资产（LAM）的事件服务、REST接口代码开发工作。",
+                        "采用MVC模式，使用Java+OAF框架进行Web开发，PL/SQL进行数据验证以及业务逻辑的实现。"
+                    ]       
+                }
+            ],
+            "sections":[
+                {
+                    "title":"开发小工具",
+                    "fragments":[{
+                            "name":"微信公众号测试客户端",
+                            "comment":"",
+                            "startDate":"",
+                            "endDate":"",
+                            "summary":"完成发送HTTP测试数据并解析响应数据的功能测试Swing客户端，大大提高复杂逻辑的公众号功能测试效率。",
+                            "details":[]        
+                        },
+                        {
+                            "name":"火狐搜索插件",
+                            "comment":"",
+                            "startDate":"",
+                            "endDate":"",
+                            "summary":"独立编写快速搜索小插件，使用Spring MVC+HttpClient完成搜索推荐（如热门微博）的数据格式适配。",
+                            "details":[]        
+                        }]
+                },
+                {
+                    "title":"培训经历",
+                    "fragments":[{
+                        "name":"甲骨文人才发展中心",
+                        "comment":"2013校招培训项目",
+                        "startDate":"2013.09",
+                        "endDate":"2013.12",
+                        "summary":"",
+                        "details":["校招深圳研发中心B组组长，第一届甲骨文编程马拉松中获带领小组获项目“创新奖”，本人获“优秀小组长"]      
+                    },
+                    {
+                        "name":"甲骨文大学",
+                        "comment":"技术培训",
+                        "startDate":"2013.7",
+                        "endDate":"2013.9",
+                        "summary":"参与甲骨文大学(对外)Java7 、SQL、PL/SQL、Oracle Application Framework（OAF）等7门技术培训课程。",
+                        "details":[]        
+                    }]
+                },
+                {
+                    "title":"英语能力",
+                    "points":["无障碍阅读原版技术书籍、文档、StackOverflow","能与跨国团队协作","英语六级、剑桥商务英语国际证书。"]
+                }
+            ],
+
+            "educations":[{
+                            "university":"华南农业大学",
+                            "studyType":"本科",
+                            "major":"软件工程",
+                            "startDate":"2009.07",
+                            "endDate":"2013.07",
+                            "gpa":"3.93/5.00",
+                            "scholarships":["二等奖学金"],
+                            "experiences":[
+                                            "英语口语协会会长，信息技术中心常务部副部长，软件学院助理班主任",
+                                            "社团类荣誉：2010年度华南农业大学“优秀团干部”、2009年度华南农业大学“优秀团员”",
+                                            "实践类荣誉：2010亚运会志愿服务“志愿者先进个人”、“突出贡献奖”、第四届“新鲜人”才艺大赛二等奖"
+                                            
+                                            ]
+                        }
+                    ]
+
 }
