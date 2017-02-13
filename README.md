@@ -5,30 +5,49 @@ EasyResume简单的使用一个json文件，配置属于你的简历的内容，
 ------------
 ##Demo
 
-[查看demo](http://jaskey.github.io/easyresume/jaskey.html "例子")
+[查看demo](http://jaskey.github.io/easyresume "例子")
 
 [在线编辑器(部分功能)](http://jaskey.github.io/easyresume/edit.html "在线编辑")
 
 --------------
 ##快速开始
 
-```
-git clone https://github.com/Jaskey/easyresume.git
-```
+1.fork 项目后克隆
 
-EasyResume的html文件需要使用HTTP的方式查看。若安装了python,可以使用
-
-```
-python -m SimpleHTTPServer
-```
-启动一个HTTP服务，然后在[http://localhost:8000](http://localhost:8000)下查看`resume.html`
+    git clone https://github.com/YourGithubName/easyresume.git
 
 
-## 配置JSON
+2.提供一个resume.json文件，
 
-注：建议使用[在线编辑器(部分功能)](http://jaskey.github.io/easyresume/edit.html "在线编辑")下载后，再手动调整.
+3.
 
-###键值说明
+    git commit -m
+    git push origin 
+
+4. 为项目开启github page
+ 
+5. 访问https://github.com/YourGithubName/easyresume
+
+
+## 本地预览
+
+本地预览需要一个HTTP服务器，在HTTP服务下查看index.html，使用python可以简单的使用：
+
+
+    python -m SimpleHTTPServer
+
+启动一个HTTP服务，然后在[http://localhost:8000](http://localhost:8000)下查看`index.html`
+
+-----------------------------------------------------------
+
+
+# 开发者文档
+
+整个简历仅需要读取`resume.json`文件，通过修改resume.json文件即可更新简历内容。
+
+建议使用[在线编辑器(部分功能)](http://jaskey.github.io/easyresume/edit.html "在线编辑")在线编辑简单的模版后，再手动调整。
+
+### resume.json键值说明
 
 key | 说明 | 类型 | 默认
 ------------- | -------------| -------------| -----------
