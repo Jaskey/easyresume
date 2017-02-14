@@ -34,8 +34,11 @@ EasyResume简单的使用一个json文件，配置属于你的简历的内容，
 
 在推仓库前若想本地预览，需要一个布HTTP服务器，在HTTP服务下查看index.html，使用python可以简单地使用：
 
-
+    ##python2
     python -m SimpleHTTPServer
+
+    ##python3
+    python -m http.server 8000 
 
 启动一个HTTP服务，然后在[http://localhost:8000](http://localhost:8000)下查看`index.html`
 
@@ -62,7 +65,7 @@ pages|个人主页链接 | 数组 | []
 summaries|个人概况 | 字符串数组 | []
 workExperiences| 工作经历| 字符串 | []
 projectExperiences| 项目 | 字符串 | []
-sections|其他需要额外添加的经历/段落 | 数组 | []
+sections|自定义经历/段落 | 数组 | []
 educations|教育经历 | 数组 | []
 
 
@@ -144,6 +147,57 @@ segmentfault| SegmentFault
 wechat| 微信
 lofter| Lofter
 weibo| 新浪微博
+
+
+## 自定义段落
+
+配置示例：
+   
+        "sections": [
+        {
+            "title": "学生干部经历",
+            "fragments":[
+                {
+                    "name":"大学生职业规划园",
+                    "comment":"副主席（分管人力资源部、公关部）",
+                    "startDate":"2013/09",
+                    "endDate":"2014/06",
+                    "summary":"",
+                    "details":[
+                        "多次负责组织招新、大型比赛、内部培训等筹划，作为我园公关代表联系兄弟组织、与商家洽谈赞助；",
+                        "汇编适用全园制度，修改“部门评优制度”、“绩效考核制度”、“优秀干部评选条例”并沿用至今；"
+                    ]        
+                },
+                {
+                    "name":"信息学院",
+                    "comment":"2013级新生助理班主任",
+                    "startDate":"2013/09",
+                    "endDate":"2014/06",
+                    "summary":"2013届信息学院软件1班班主任",
+                    "details":[
+                        "引导新生迅速适应大学生活，为本班28名新生提供学习、生活、心理等咨询和帮助；",
+                        "班级获得学院先进班集体、团日活动优秀奖，近半数人成为学生干部，近10人获得校三等以上奖学金。" 
+                    ]        
+                }
+            ]
+        },
+
+
+        {
+            "title": "英语能力",
+            "points": [
+                "英语六级",
+				"能无障碍阅读英文技术文档、论文"
+            ]
+        }
+    ],
+
+
+section里面的数组的每个对象表示一个自定义模块，其中"title"是要显示的默认内容
+经历分两种，一种是带开始时间结束时间的`fragments`,另一种是只列项目的`points`（适合于列技能、奖项等）
+
+- `fragments`配置项和项目经历的配置一致。
+- `points`配置项中接受一个字符串数组
 
 ## 打赏一块几毛
 
