@@ -15,7 +15,6 @@
     "workExperiences": [
         {
             "company": "大腿公司",
-            "companyLogo": "image/neteasegame.png",
             "post": "高级软件工程师",
             "startDate": "2015.01",
             "endDate": "至今",
@@ -27,7 +26,6 @@
         },
         {
             "company": "小牛公司",
-            "companyLogo": "image/oracle.png",
             "post": "软件工程师",
             "startDate": "2013.07",
             "endDate": "2015.01",
