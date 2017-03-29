@@ -38,6 +38,11 @@
 					json.projectExperiences[projectIndex]= projectJSON;
 					this.updateStateJSON(json);
 				},
+                handleProjectDelete:function(projectIndex){
+                    var json = this.getEditorJSON();
+                    json.projectExperiences.splice(projectIndex, 1);;
+                    this.updateStateJSON(json);
+                },
 
 				//教育经历更改
 				handleEducationChange:function(educationIndex,educationJSON){
@@ -46,24 +51,40 @@
 					this.updateStateJSON(json);
 				},
 
-				hanldeWorkInfoChange:function(workIndex,jsonKey,value){
-					var json = this.getEditorJSON();
-					json.workExperiences[workIndex][jsonKey] = value;
-					this.updateStateJSON(json);						
-				},
-
-				hanldeWorkDetailChange:function(workIndex,i,value){
-					//console.log('hanldeWorkDetailChange',workIndex,i,value);
-					var json = this.getEditorJSON();
-					json.workExperiences[workIndex]['details'][i] = value;
-					this.updateStateJSON(json);
-				},
-
+				//自定义模块update
 				handleSectionsChange: function(sectionIndex,sectionJSON){
+					console.log("handle section change," , sectionIndex,sectionJSON);
 					var json = this.getEditorJSON();
 					json['sections'][sectionIndex] = sectionJSON;
 					this.updateStateJSON(json);
 				},
+
+
+                /*START : WORK*/
+                //工作的普通信息更新
+                hanldeWorkInfoChange:function(workIndex,jsonKey,value){
+                    var json = this.getEditorJSON();
+                    json.workExperiences[workIndex][jsonKey] = value;
+                    this.updateStateJSON(json);
+                },
+
+                //删除一段工作经历
+                handleWorkFragmentDelete:function(workIndex){
+                    var json = this.getEditorJSON();
+                    json.workExperiences.splice(workIndex, 1);;
+                    this.updateStateJSON(json);
+                },
+
+                //工作经历的details详情更新
+                handleWorkDetailChange:function(workIndex,i,value){
+                    var json = this.getEditorJSON();
+                    json.workExperiences[workIndex]['details'][i] = value;
+                    console.debug('hanldeWorkDetailChange',workIndex,i,value,json);
+
+                    this.updateStateJSON(json);
+                },
+                /*END : WORK*/
+
 
 				//o= jsonkey对应的对象，被merge过去更新resume
 				updateJSONAndPreview :function(o){
@@ -80,6 +101,7 @@
 				},
 
 				getEditorJSON:function(){
+					console.log("getEditorJSON",this.state.json)
 					return this.state.json;
 				},
 				
@@ -100,6 +122,17 @@
 					a.remove();
 				},
 
+
+				//add one exeperience under one custom sections
+				handleAddFragments: function(sectionKey, event){
+					console.log("add a fragment for "+sectionKey);
+					var state = this.state;
+					//state.json[sectionKey].push(WorkEditInput.defaultJSON);//增加一段经历
+					state.json[sectionKey].push(buildDefaultConfigJSON(sectionKey));//增加一段经历
+
+					//this.setState(state);
+					this.updateStateJSON(state.json)
+				},
 
 				componentDidMount:function(){
 				},
@@ -151,55 +184,89 @@
 									{
 										this.state.json.workExperiences.map(function(json,i){
 											
-											var onValueChange = function(workIndex){
+											let onValueChange = function(workIndex){
 												return function(jsonKey,value){
 														self.hanldeWorkInfoChange(workIndex,jsonKey,value)
 													}
 											}(i);
 
-											var onDetailChange = function(workIndex){
+											let onDetailChange = function(workIndex){
 												return function(i,value){
-														self.hanldeWorkDetailChange(workIndex,i,value)
+														self.handleWorkDetailChange(workIndex,i,value)
 													}
 											}(i);
 
+                                            let onWorkDelete = function(workIndex){
+                                                return function(workIndex) {
+                                                    self.handleWorkFragmentDelete(workIndex);
+                                                }
+                                            }(i);
 
-											return <WorkEditInput key={"work-"+i} index={i} jsonKey="workExperiences" editor={self} 
+
+											return <div className = "fragmentBlock">
+                                                        <WorkEditInput key={"work-"+i} index={i} jsonKey="workExperiences" editor={self}
 														json={json}
 														onValueChange={onValueChange}
 														onDetailChange={onDetailChange}
 														/>
+                                                        <a href = "#" className="deleteFragment" onClick = {onWorkDelete}>delete</a>
+                                                    </div>
+
 										})
 									}
+
+									<a href="#" className="add-fragment" onClick={this.handleAddFragments.bind(self,"workExperiences")}>
+										添加一段工作经历
+									</a>
+
 								</div>
 
-
+								{/*项目经历*/}
 								<div id="editProjectExperiences" className="edit-section" jsonKey="projectExperiences">
 									<div className="header">项目经历</div>
 									{
 										this.state.json.projectExperiences.map(function(json,projectIndex){
 
-											var onProjectChange = function(projectIndex){
+											let onProjectChange = function(projectIndex){
 												return function(projectJSON){
 														return self.handleProjectChange(projectIndex,projectJSON);
 													}
-											}(projectIndex)
+											}(projectIndex);
 
-											return 	<ProjectEditInput 
-														key={"project-"+projectIndex} 
-														index={projectIndex}
-														json={json}
-														onProjectChange={onProjectChange}
-														/>
-													
-										})
-									}									
+                                            let onProjectDelete = function(projectIndex){
+                                                 return function () {
+                                                     self.handleProjectDelete(projectIndex)
+                                                 }
+                                            }(projectIndex)
+
+											return 	<div className = "fragmentBlock">
+                                                        <ProjectEditInput
+                                                            key={"project-"+projectIndex}
+                                                            index={projectIndex}
+                                                            json={json}
+                                                            onProjectChange={onProjectChange}
+														    />
+                                                        <a href = "#" className="deleteFragment" onClick = {onProjectDelete}>delete</a>
+                                                    </div>
+
+                                            })
+									}
+									<a href="#" title="点击添加一个项目经历" className="add-fragment" onClick={this.handleAddFragments.bind(self,"projectExperiences")}>
+										添加一个项目
+									</a>									
 								</div>
 
-								<EditSections jsons={self.getEditorJSON().sections}
-									onSectionsChange={self.handleSectionsChange}/>
+								{/*自定义模块*/}
+								<div id="customSections" className="edit-section" jsonKey="sections">
+									<EditSections jsons={self.getEditorJSON().sections}
+										onSectionsChange={self.handleSectionsChange}/>
 
+									<a href="#" className="add" onClick={this.handleAddFragments.bind(self,"sections")}>
+										添加一段自定义模块
+									</a>	
+								</div>
 
+								{/*教育经历*/}
 								<div id="editEducationExperiences" className="edit-education" jsonKey="educations">
 									<div className="header">教育经历</div>
 									{
@@ -217,9 +284,12 @@
 														json={json}
 														onEducationChange={onEducationChange}/>
 										})
-									}									
-								</div>
+									}	
 
+									<a href="#" className="add" onClick={this.handleAddFragments.bind(self,"educations")}>
+										添加一段教育经历
+									</a>									
+								</div>
 
 							</div> 
 
@@ -227,3 +297,17 @@
 				}
 			}
 		);
+
+
+		function buildDefaultConfigJSON(jsonKey) {
+			switch (jsonKey) {
+				case "workExperiences" :
+					return jQuery.extend(true,{},Work.emptyJSON);
+				case "projectExperiences":
+					return jQuery.extend(true,{},ProjectExperience.emptyJSON);
+				case "educations":
+					return jQuery.extend(true,{},Educations.emptyJSON);	
+				case "sections":
+					return jQuery.extend(true,{},Section.emptyJSON,{title:"自定义模块",fragments:[Fragment.emptyJSON]});	
+			}
+		}

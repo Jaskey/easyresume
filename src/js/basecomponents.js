@@ -1,4 +1,4 @@
-﻿		window.Fragment = React.createClass({
+		window.Fragment = React.createClass({
 			getDefaultProps:function(){
 				return {
 					option:{
@@ -52,6 +52,14 @@
 			}
 		});
 
+		window.Fragment.emptyJSON = {
+			name:'',
+			comment:'',
+			startDate:'',
+			endDate:'',
+			summary:'',
+			details:[]
+		};
 
 		/**
 		一整块区域，一个section下面每一段子区域为Fragment
@@ -95,3 +103,9 @@
 			}
 			
 		});
+
+		window.Section.emptyJSON = {
+			title:"sectionTitle",
+			fragments:[],
+			points:[]
+		}

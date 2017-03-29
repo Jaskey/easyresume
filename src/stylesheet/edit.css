@@ -1,52 +1,52 @@
-		body{
-			display:flex;
-		}
+body {
+    display: flex;
+}
 
-		#sliderBar{
-			width: 300px;
-			height: 100%;
-			position: absolute;
-			overflow-y: auto;
-		}
+#sliderBar {
+    width: 395px;
+    height: 100%;
+    position: absolute;
+    overflow-y: auto;
+}
 
-		#container{
-			/* flex:1; */
-			margin-left: 300px;
-			height: 100%;
-			overflow-y: auto;
-		}
+#container {
+    flex: 1;
+    margin-left: 400px;
+    height: 100%;
+    overflow-y: auto;
+}
 
-		div#defaultMsg {
-		    display:none;
-		    min-width: 500px;
-		    height: 100%;
-		    font-size: 20px;
-		    line-height: 3;
-		    padding: 50px;
-		}
+div#defaultMsg {
+    display: none;
+    min-width: 500px;
+    height: 100%;
+    font-size: 20px;
+    line-height: 3;
+    padding: 50px;
+}
 
-		div#defaultMsg code{
-			border-radius: 10px;
-			background: #EEE;
-    		padding: 15px;
-		}
+div#defaultMsg code {
+    border-radius: 10px;
+    background: #EEE;
+    padding: 15px;
+}
 
-		.input-wrapper {
-		    /* border: 1px solid #ddd; */
-		    border-radius: 2px;
-		    margin: 10px 10px;
-		}
+.input-wrapper {
+    /* border: 1px solid #ddd; */
+    border-radius: 2px;
+    margin: 10px 10px;
+}
 
-		.input-wrapper input{
-			border: 0;
-			border-bottom: 1px solid #ddd;
-			font-size: 13px;
-			margin: 2px 10px;
-			outline: 0;
-			padding: 3px 0 3px;
-			resize: none;
-			width: 100%;
-		}
+.input-wrapper input {
+    border: 0;
+    border-bottom: 1px solid #ddd;
+    font-size: 13px;
+    margin: 2px 10px;
+    outline: 0;
+    padding: 3px 0 3px;
+    resize: none;
+    width: 100%;
+}
 
 div#editor {
     padding: 10px 20px;
@@ -63,22 +63,28 @@ body {
 .edit-section {
     border: 1px solid #ddd;
     padding: 10px;
-    margin-bottom: 5px;
+    margin-bottom: 30px;
 }
 
 .block-wrapper {
-    background: #fff;      border: 1px solid #ddd;      border-radius: 2px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 2px;
     margin-bottom: 20px;
 }
 
 .block-wrapper::before {
-    background: #ececec;      background-image: linear-gradient(#f4f4f4,#ececec);      border-bottom: 1px solid #ddd;      cursor: row-resize;                  min-height: 10px;  
+    background: #ececec;
+    background-image: linear-gradient(#f4f4f4, #ececec);
+    border-bottom: 1px solid #ddd;
+    cursor: row-resize;
+    min-height: 10px;
     display: block;
     content: ' ';
 }
 
-.array-wrapper .array-input{
-	margin-top:5px;
+.array-wrapper .array-input {
+    margin-top: 5px;
 }
 
 .label {
@@ -96,4 +102,57 @@ body {
 .download {
     margin-bottom: 20px;
     overflow: auto;
+}
+
+.sectionBox {
+    border: 1px dashed #ddd;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-top: 10px solid  black;
+    border-radius: 10px;
+}
+
+.btn-add {
+url(../image/icon-add.png);
+    margin: 5px 0 0 5px;
+    display: block;
+    height: 20px;
+    width: 20px;
+    background-image: url(../image/icon-add.jpg);
+    cursor: pointer;
+}
+
+.header .input-wrapper {
+    margin: 0;
+}
+
+.header .input-wrapper input {
+    font-size: 2.0rem;
+}
+
+.fragmentBlock {
+    position: relative;
+}
+
+.deleteFragment {
+    position: absolute;
+    right: 7px;
+    top: 16px;
+}
+
+.points-block-wrapper .deleteFragment {
+    position: absolute;
+    right: 0;
+    top: -10px;
+}
+
+
+div#customSections {
+    border: none;
+    padding: 0;
+    margin-bottom: 40px;
+}
+
+.fragment-wrapper,.points-block-wrapper {
+    position: relative;
 }

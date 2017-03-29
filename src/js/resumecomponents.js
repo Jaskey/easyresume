@@ -1,6 +1,6 @@
 ﻿		window.Resume = React.createClass({
 			getDefaultProps:function (){
-				console.log('[Resume][getDefaultProps]');
+				console.debug('[Resume][getDefaultProps]');
 				return {
 					json:{}
 				}
@@ -8,7 +8,7 @@
 			
 
 			getInitialState:function(){
-				console.log('[Resume][getInitialState]');
+				console.debug('[Resume][getInitialState]');
 				return {
 					
 				}
@@ -44,7 +44,6 @@
 			},
 			
 			componentDidMount:function(){
-				console.log('[Resume][componentDidMount]');
 			}
 		})
 		
@@ -156,7 +155,9 @@
 			}
 				
 		});
-		
+				
+
+
 		//工作经历模块
 		window.Work = React.createClass({
 			getDefaultProps:function(){
@@ -168,7 +169,9 @@
 				var workExperiences = this.props.workExperiences||[];
 				
 				for(var i =0;i<workExperiences.length;i++){
-					var we = workExperiences[i];//TODO empty 处理
+					var we = jQuery.extend({}, Work.emptyJSON);//default it is empty,
+					jQuery.extend(we, workExperiences[i]);//merge the config json
+					console.debug("工作经历we",we);
 					var work = 
 								<div key={"work-experience_"+i} className="work-Fragment">
 									<div className="work-date">
@@ -185,7 +188,6 @@
 										<h2>{we.company}</h2>
 										<h3>{we.post}</h3>
 										
-
 
 										<div className="work-experience-content">
 											{
@@ -219,6 +221,17 @@
 			
 		});
 		
+		window.Work.emptyJSON = {
+                    "company":"",
+                    "post":"",
+                    "startDate":"",
+                    "endDate":"",
+                    "summary":"",
+                    "details":[
+                        ""
+                    ]       
+        };
+
 		
 		window.ProjectExperience = React.createClass({
 			getDefaultProps:function(){
@@ -260,7 +273,16 @@
 			}
 		});
 		
-		
+		window.ProjectExperience.emptyJSON = {
+                    "projectName":"",
+                    "role":"",
+                    "startDate":"",
+                    "endDate":"",
+                    "summary":"",
+                    "details":[
+                        ""
+                    ]       
+        };
 
 		
 		window.OtherSections = React.createClass({
@@ -315,6 +337,10 @@
 			}
 		});
 		
+
+
+
+
 		window.Educations = React.createClass({
 		
 			getDefaultProps:function(){
@@ -375,3 +401,14 @@
 				)
 			}
 		})
+
+		window.Educations.emptyJSON = {
+						university:'',
+						studyType:'',
+						major:'',
+						startDate:'',
+						endDate:'',
+						gpa:'',
+						scholarships:[],
+						experiences:[]
+					};

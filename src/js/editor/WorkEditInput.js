@@ -4,7 +4,7 @@
 					return {
 						index:0,
 						jsonKey:'workExperiences',
-						json:{},//工作经历的配置
+						json: {},
 						editor:null,//所属的面板组件,用于获取整体配置并更新
 						onDetailChange:function(index,value){},
 						onValueChange:function(jsonKey,value){}
@@ -22,7 +22,10 @@
 
 				render:function(){
 					var self = this;
-					var json = this.props.json;
+					var json = jQuery.extend({}, Work.emptyJSON);//default it is empty,
+					jQuery.extend(json, this.props.json);//merge the config json
+					console.debug("rendering work workExperiences" , json);
+
 					return (
 						<div>								
 							<div className="block-wrapper">						
@@ -64,3 +67,4 @@
 					)
 				}
 		});
+

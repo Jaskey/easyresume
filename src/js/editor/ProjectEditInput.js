@@ -46,7 +46,7 @@
 											/>
 
 										<StringInput 
-											label={'start date'}
+											label={'开始日期'}
 											jsonKey={'startDate'}  
 											value={json.startDate} 
 											onValueChange={this.handleValueChange}
@@ -54,14 +54,14 @@
 
 
 										<StringInput 
-											label={'end date'}
+											label={'结束日期'}
 											jsonKey={'endDate'}  
 											value={json.endDate} 
 											onValueChange={this.handleValueChange}
 											/>																					
 
 										<StringInput 
-											label={'summary'}
+											label={'概述'}
 											jsonKey={'summary'}  
 											value={json.summary} 
 											onValueChange={this.handleValueChange}
@@ -69,7 +69,7 @@
 
 
 										<ArrayInput 
-											label={'details'}
+											label={'详情'}
 											jsonKey={'details'}  
 											values={json.details} 
 											onValueChange={this.handleDetailsChange}
