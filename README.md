@@ -2,21 +2,28 @@
 
 EasyResume简单的使用一个json文件，配置属于你的简历的内容，只需要快捷的几步，便能生成一个样式美观整齐的在线简历。（支持移动端显示）
 
+欢迎各位fork和star!
+
 ------------
-##Demo
+## Demo
 
 [查看demo](http://jaskey.github.io/easyresume "例子")
 
-[在线编辑器(部分功能)](http://jaskey.github.io/easyresume/edit.html "在线编辑")
+## 在线编辑器
+
+建议使用在线编辑编辑后再下载到本地手动调整`resume.json`文件。
+
+链接：[在线编辑器(Beta)](http://jaskey.github.io/easyresume/edit.html "在线编辑")
 
 --------------
-##快速开始
+## 快速开始
+使用`EasyResume`生成自己的在线简历只需要以下几步
 
-1. fork 项目
-2. 为项目开启github page
+1. fork本项目项目
+2. 为fork后的项目[开启Github Page功能](https://guides.github.com/features/pages/ "怎样开启Github Page？")
 3. 克隆fork后在个人名下的项目：`git clone https://github.com/YourGithubName/easyresume.git`
-4. 修改`resume.json`文件，里面是简历的内容。可使用[在线编辑器(部分功能)](http://jaskey.github.io/easyresume/edit.html "在线编辑")在线编辑简单的模版后，再手动调整。
-5. 提交代码并推上仓库
+4. 按照自身的经历，修改项目下的`resume.json`文件。
+5. commit代码并push到仓库
 
 推仓库命令示意：
    
@@ -25,14 +32,18 @@ EasyResume简单的使用一个json文件，配置属于你的简历的内容，
     git push origin 
 
 
+以后更新简历，只需要更新`resume.json`即可。
+
 ## 在线访问： 
 
-更新仓库后，直接访问仓库的github page即可：https://yourgithubName.github.io/easyresume
+更新仓库后，直接访问仓库的github page即可访问自己的在线简历：https://yourgithubName.github.io/easyresume
 
 
 ## 本地预览
 
-在推仓库前若想本地预览，需要一个布HTTP服务器，在HTTP服务下查看index.html，使用python可以简单地使用：
+在推仓库前若想本地预览，需要一个HTTP服务器，在HTTP服务下查看index.html。
+
+若使用了python，在项目路径下使用：
 
     ##python2
     python -m SimpleHTTPServer
@@ -44,16 +55,17 @@ EasyResume简单的使用一个json文件，配置属于你的简历的内容，
 
 -----------------------------------------------------------
 
-
 # 开发者文档
 
-整个简历仅需要读取`resume.json`文件，通过修改`resume.json`文件即可更新简历内容。
+整个简历仅需要读取`resume.json`文件，通过修改`resume.json`文件即可更新简历内容。本文档详细介绍resume.json中所有的结构及意义。
 
-建议使用[在线编辑器(部分功能)](http://jaskey.github.io/easyresume/edit.html "在线编辑")在线编辑简单的模版后，再手动调整。
+建议初次使用者，使用[在线编辑器(Beta)](http://jaskey.github.io/easyresume/edit.html "在线编辑")在线编辑简单的模版后，下载至本地再手动调整。
 
 注：`resume.json`文件必须严格按照JSON格式，请务必检查好格式，否则简历初始化会失败，建议上传前先使用工具检查好文件格式。
 
 ### resume.json键值说明
+
+配置为一个JSON对象，里面支持的key有如下：
 
 key | 说明 | 类型 | 默认
 ------------- | -------------| -------------| -----------
@@ -70,8 +82,10 @@ projectExperiences| 项目 | 字符串 | []
 sections|自定义经历/段落 | 数组 | []
 educations|教育经历 | 数组 | []
 
+详细配置及说明见后续章节
 
-###工作经历
+
+### 工作经历
 
 key: `workExperiences`
 
@@ -81,13 +95,13 @@ key | 说明 | 类型 | 是否可空
 ------------- | -------------| ------------ | -----------
 company | 公司名 | 字符串 | NO
 post| 所任职位 | 字符串  | NO
-startDate|就职日期 | 字符串 | NO
+startDate|就职开始日期 | 字符串 | NO
 endDate|就职结束日期 | 字符串 | NO
 summary|概览 | 字符串 | YES | YES
 details|经历详情|数组 | YES
 
 
-###项目经历
+### 项目经历
 
 key: `projectExperiences`
 
@@ -102,7 +116,7 @@ endDate|项目结束日期 | 字符串 | NO
 summary|概览 | 字符串 | YES | YES
 details|项目详情| 字符串数组 | YES
 
-###教育经历
+### 教育经历
 
 key: `educations`
 
@@ -113,14 +127,14 @@ key | 说明 | 类型 | 是否可空
 university | 学校名 | 字符串 | NO
 studyType| 学历 | 字符串  | NO
 major| 专业 | 字符串  | NO
-startDate|项目开始日期 | 字符串 | NO
-endDate|项目结束日期 | 字符串 | NO
+startDate|教育经历开始日期 | 字符串 | NO
+endDate|教育经历结束日期 | 字符串 | NO
 gpa|绩点 | 字符串 | YES
 scholarships|奖学金 | 字符串数组 | YES | YES
 experiences|校园经历详情|字符串数组 | YES
 
 
-###个人主页配置
+### 个人主页配置
 
 key: `pages`
 
@@ -134,7 +148,7 @@ key: `pages`
 				{"douban":"http://www.douban.com/people/linjunjie1103/"}
 			]
 
-对象中每个key代表一个主页类型，value是对应的链接。
+对象中每个key代表一个主页类型，value是则是对应的主页链接。
 
 key将用于渲染对应的图标，目前支持的图标有：
 
@@ -151,7 +165,7 @@ lofter| Lofter
 weibo| 新浪微博
 
 
-## 自定义段落
+### 自定义段落
 
 配置示例：
    
@@ -197,10 +211,11 @@ weibo| 新浪微博
 
 `sections`数组的每个对象表示一个自定义模块，其中`title`是要显示的标题。
 
-后面跟随一个经历的对象数组。经历分两种，一种是带开始时间、结束时间、副标题的`fragments`；另一种是只列详情的`points`（适合于列技能、奖项等）
+后面跟随一个经历的对象数组。自定义段落支持两种格式，一种是带开始时间、结束时间、副标题的`fragments`；另一种是只列详情的`points`（适合于列技能、奖项等）
 
-- `fragments` :配置项和项目经历的配置一致。
-- `points` : 配置项中接受一个字符串数组
+配置说明：
+- `fragments` :配置项和项目经历的配置一致。具体请参看配置示例。
+- `points` : 配置项中接受一个字符串数组。具体请参看配置示例
 
 ## 打赏一块几毛
 
