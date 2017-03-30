@@ -29,7 +29,6 @@
 				render:function(){
 						var self =this;
 						var json = this.props.json;
-                        console.log("rendering project edit input,",json);
                     return (
 							<div className="block-wrapper">								
 								<div className="input-wrapper">						

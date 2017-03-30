@@ -11,10 +11,6 @@
 					}
 				},
 
-				getInitialState:function(){
-					return this.props;
-				},
-
 				handleInputChange:function(index,event){
 					var value = event.target.value;
 					var index = index;
@@ -24,16 +20,13 @@
 
 				//输入框增加一行
 				handleAddRow: function(event){
-					var state = this.state;
-					state.values.push("");//增加一个空字符串，使得多一个输入框
-					this.setState(state);
-				},
+                    this.props.onValueChange(this.props.jsonKey,this.props.values.length,"");
+                },
 
 				render:function(){
 					var self = this;
-					//var prop = this.getProps();
-					//var props = this.props;
-					var values = this.state.values; //
+					var props = this.props;
+					var values = this.props.values; //
 					return (
 						<div className="input-wrapper array-wrapper">								
 								<div className="label">{this.props.label}</div>

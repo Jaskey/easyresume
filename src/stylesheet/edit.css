@@ -99,7 +99,7 @@ body {
     margin-top: 3px;
     font-size: 12px;
     border-radius: 4px;
-},
+}
 
 .download button{
     border: 1px solid #d4d4d4;
@@ -107,7 +107,7 @@ body {
     padding: 3px;
     float: right;
     outline: none;
-},
+}
 
 .download {
     margin-bottom: 20px;
@@ -183,4 +183,8 @@ div.download {
     overflow: hidden;
     margin-right: 10px;
     margin-bottom: -25px;
+}
+
+.array-input div {
+    margin-bottom: 4px;
 }

@@ -24,12 +24,10 @@
 					var self = this;
 					var json = jQuery.extend({}, Work.emptyJSON);//default it is empty,
 					jQuery.extend(json, this.props.json);//merge the config json
-					console.debug("rendering work workExperiences" , json);
-
 					return (
 						<div>								
-							<div className="block-wrapper">						
-									<StringInput jsonKey="company" editor={this.props.editor} label="公司" value={json.company} 
+							<div className="block-wrapper">
+									<StringInput jsonKey="company" editor={this.props.editor} label="公司" value={json.company}
 										index = {this.props.index}
 										workComponent = {this}
 										onValueChange={this._handleStringInputChange}
