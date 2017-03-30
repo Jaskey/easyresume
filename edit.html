@@ -28,15 +28,15 @@
     <script type="text/babel" src="src/js/resumecomponents.js" charset="UTF-8"></script>
 
 	<style>
-
-
 	</style>
 
   </head>
   <body>
 
 	<div id="sliderBar">
-		
+        <button id="uploadBtn">上传JSON配置</button>
+		<input type="file" id="selectFiles"/><!--上传文件的input，会被隐藏-->
+		<div id="editorArea"></div>
 	</div>
 	<div id="container">
     	<div id="defaultMsg">
@@ -65,21 +65,49 @@
 
 	<script type="text/babel">
 
-		var json ={}
-		
+        function renderPage(json) {
+            $("#editorArea").empty();
+            editor = ReactDOM.render(<div><Editor json={json}/></div>,document.getElementById('editorArea'));
+            ReactDOM.render(<div><Resume  json={json}/></div>,document.getElementById('container'));
+        }
+
+		var json ={};
+        var editor;//editor component
+        var handleUpload = function() {
+            console.log("getstate",editor);
+            var files = document.getElementById('selectFiles').files;
+            if (files.length <= 0) {
+                return false;
+            }
+            var fr = new FileReader();
+            fr.onload = function (e) {
+                var json = JSON.parse(e.target.result);
+                console.log("uploading json ",json);
+                renderPage(json);
+            };
+            fr.readAsText(files.item(0));
+        };
+
+        $("#uploadBtn").off("click").on("click",function(){
+            $('#selectFiles').trigger("click");
+        });
+
+        $('#selectFiles').change(function(e){
+            console.log("change....")
+            handleUpload();
+        });
+
 		//preview
 		$.getJSON("demo.json",[],function(data){
 			console.log('[resume.json read successfully]',data);
-			json = data;//from demo.json
-			var editor = ReactDOM.render(<div><Editor json={json}/></div>,document.getElementById('sliderBar'));	
-			ReactDOM.render(<div><Resume  json={json}/></div>,document.getElementById('container'));
+            renderPage(data);
 		});
 
 		//一秒后显示默认的提示区域，如果正常初始化，$('#defaultMsg')将不存在，故没有作用
 		window.setTimeout(function(){
 			$('#defaultMsg').show();
 		},1000);
-	
+
 	</script>
   
   </body>

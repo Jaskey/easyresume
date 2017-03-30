@@ -91,13 +91,23 @@ body {
     color: #999;
 }
 
-.download button {
+#uploadBtn{
+    border: 1px solid #d4d4d4;
+    background-color: #ececec;
+    padding: 2px;
+    margin-left: 21px;
+    margin-top: 3px;
+    font-size: 12px;
+    border-radius: 4px;
+},
+
+.download button{
     border: 1px solid #d4d4d4;
     background-color: #ececec;
     padding: 3px;
     float: right;
     outline: none;
-}
+},
 
 .download {
     margin-bottom: 20px;
@@ -155,4 +165,22 @@ div#customSections {
 
 .fragment-wrapper,.points-block-wrapper {
     position: relative;
+}
+
+input#selectFiles {
+    display: none;
+}
+
+#downloadBtn {
+    background-image: url(../image/download.png);
+    width: 20px;
+    height: 20px;
+    float: right;
+    cursor: pointer;
+}
+
+div.download {
+    overflow: hidden;
+    margin-right: 10px;
+    margin-bottom: -25px;
 }

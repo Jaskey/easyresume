@@ -58,11 +58,11 @@
 
 					return (
 							<div className="sectionBox">
-								<div className="header">									
+								<div className="header">
 									<StringInput className="header"
 												label={''}
-												jsonKey={'title'}  
-												value={section.title} 
+												jsonKey={'title'}
+												value={section.title}
 												onValueChange={onValueChange}
 									/>
 								</div>
@@ -84,10 +84,9 @@
                                                 }
                                             }(framentIndex);
 
-											return <div>
-                                                        <div className="fragment-wrapper">
+											return <div key={"fragments-_"+framentIndex} >
+                                                        <div className="fragment-wrapper" >
                                                             <FragmentEditInput
-                                                                        key={"fragments-_"+framentIndex}
                                                                         json={f}
                                                                         onFragmentChange={onFragmentChange}
                                                                     />
@@ -95,7 +94,7 @@
                                                         </div>
                                                     </div>
 										})
-								
+
 										:
                                         function() {
                                             return <div className="points-block-wrapper">
@@ -150,7 +149,7 @@
 
 
 											
-											return 	<EditSection json={section} index={i}
+											return 	<EditSection key={i} json={section} index={i}
 													onSectionChange={onSectionChange}
 													/>
 										})

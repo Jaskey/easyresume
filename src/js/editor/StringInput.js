@@ -28,7 +28,7 @@
 				render:function(){
 					//console.log('[StringInput][Render],state = ',this.state);
 					return (
-						<div className="input-wrapper" 	>								
+						<div className="input-wrapper" 	>
 							<div>
 								{ this.state.label? <div className="label">{this.state.label}</div> :<div className="emptyNode"></div>}
 								<input type="text"
