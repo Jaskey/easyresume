@@ -120,6 +120,7 @@ body {
     margin-bottom: 10px;
     border-top: 10px solid  black;
     border-radius: 10px;
+    position: relative;
 }
 
 .btn-add {margin: 0px 0 0 5px;display: inline-block;height: 20px;width: 20px;background-image: url(../image/icon-add.jpg);cursor: pointer;vertical-align: middle;}
@@ -180,4 +181,14 @@ div.download {
 
 .array-input div {
     margin-bottom: 4px;
+}
+
+.section-delete {
+    position: absolute;
+    right: 14px;
+    top: 5px;
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    background-image: url(../image/icon-delete2.jpg);
 }

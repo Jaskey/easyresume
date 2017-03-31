@@ -57,9 +57,13 @@
 
 				//自定义模块update
 				handleSectionsChange: function(sectionIndex,sectionJSON){
-					console.log("handle section change," , sectionIndex,sectionJSON);
 					var json = this.getEditorJSON();
-					json['sections'][sectionIndex] = sectionJSON;
+					if (sectionJSON == null){//删除
+                        console.debug("[handleSectionsChange][delete],",sectionIndex);
+                        json['sections'].splice(sectionIndex,1);
+                    }else {
+                        json['sections'][sectionIndex] = sectionJSON;
+                    }
 					this.updateStateJSON(json);
 				},
 
@@ -131,11 +135,11 @@
 				},
 
 				//add one exeperience under one custom sections
-				handleAddFragments: function(sectionKey, event){
+				handleAddCustomSection: function(sectionKey, event){
 					var state = this.state;
-					//state.json[sectionKey].push(WorkEditInput.defaultJSON);//增加一段经历
-					state.json[sectionKey].push(buildDefaultConfigJSON(sectionKey));//增加一段经历
-
+					let emptySectionConfig = buildDefaultConfigJSON(sectionKey);
+					console.log('[handleAddCustomSection][emptySectionConfig]',emptySectionConfig);
+					state.json[sectionKey].push(emptySectionConfig);//增加一段模块
 					this.updateStateJSON(state.json)
 				},
 
@@ -211,13 +215,13 @@
 														onValueChange={onValueChange}
 														onDetailChange={onDetailChange}
 														/>
-                                                        <a href = "#" className="deleteFragment" onClick = {onWorkDelete}>delete</a>
+                                                        <a href = "#" className="deleteFragment" title={"点击删除["+json.company+"]的工作经历"} onClick = {onWorkDelete}>delete</a>
                                                     </div>
 
 										})
 									}
 
-									<a href="#" className="add-fragment" onClick={this.handleAddFragments.bind(self,"workExperiences")}>
+									<a href="#" className="add-fragment" onClick={this.handleAddCustomSection.bind(self,"workExperiences")}>
 										添加一段工作经历
 									</a>
 
@@ -241,19 +245,18 @@
                                                  }
                                             }(projectIndex);
 
-                                            console.log("rendering one json project fragment",json,projectIndex);
 											return 	<div className = "fragmentBlock"  key={"project-"+projectIndex}>
                                                         <ProjectEditInput
                                                             index={projectIndex}
                                                             json={json}
                                                             onProjectChange={onProjectChange}
 														    />
-                                                        <a href = "#" className="deleteFragment" onClick = {onProjectDelete}>delete</a>
+                                                        <a href = "#" className="deleteFragment" title={"点击删除项目["+json.projectName+"]"}onClick = {onProjectDelete}>delete</a>
                                                     </div>
 
                                             })
 									}
-									<a href="#" title="点击添加一个项目经历" className="add-fragment" onClick={this.handleAddFragments.bind(self,"projectExperiences")}>
+									<a href="#" title="点击添加一个项目经历" className="add-fragment" onClick={this.handleAddCustomSection.bind(self,"projectExperiences")}>
 										添加一个项目
 									</a>									
 								</div>
@@ -262,8 +265,7 @@
 								<div id="customSections" className="edit-section" jsonKey="sections">
 									<EditSections jsons={self.getEditorJSON().sections}
 										onSectionsChange={self.handleSectionsChange}/>
-
-									<a href="#" className="add" onClick={this.handleAddFragments.bind(self,"sections")}>
+									<a href="#" className="add" onClick={this.handleAddCustomSection.bind(self,"sections")}>
 										添加一段自定义模块
 									</a>	
 								</div>
@@ -288,7 +290,7 @@
 										})
 									}	
 
-									<a href="#" className="add" onClick={this.handleAddFragments.bind(self,"educations")}>
+									<a href="#" className="add" onClick={this.handleAddCustomSection.bind(self,"educations")}>
 										添加一段教育经历
 									</a>									
 								</div>
@@ -310,6 +312,6 @@
 				case "educations":
 					return jQuery.extend(true,{},Educations.emptyJSON);	
 				case "sections":
-					return jQuery.extend(true,{},Section.emptyJSON,{title:"自定义模块",fragments:[Fragment.emptyJSON]});	
+					return jQuery.extend(true,{},Section.emptyJSON,{title:"新建模块",fragments:[Fragment.emptyJSON]});
 			}
 		}
