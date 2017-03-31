@@ -45,7 +45,7 @@ window.EditSection = React.createClass({
     handleAddFragments: function (sectionKey, event) {
         let json = this.props.json;
         let fragments = json.fragments;
-        fragments.push($.extend(true,{}, Fragment.emptyJSON));//添加空fragment配置以通知上游
+        fragments.push($.extend(true,{}, Fragment.emptyJSON,{details:["",""]}));//添加空fragment配置以通知上游
         this.props.onSectionChange(json);//触发section change
     },
 

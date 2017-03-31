@@ -302,15 +302,15 @@
 			}
 		);
 
-
+        //增加一个模块的时候，默认的配置
 		function buildDefaultConfigJSON(jsonKey) {
 			switch (jsonKey) {
 				case "workExperiences" :
-					return jQuery.extend(true,{},Work.emptyJSON);
+					return jQuery.extend(true,{},Work.emptyJSON,{"company":"新公司",details:["",""]});
 				case "projectExperiences":
-					return jQuery.extend(true,{},ProjectExperience.emptyJSON);
+					return jQuery.extend(true,{},ProjectExperience.emptyJSON,{"projectName":"新项目",details:["",""]});
 				case "educations":
-					return jQuery.extend(true,{},Educations.emptyJSON);	
+					return jQuery.extend(true,{},Educations.emptyJSON,{"university":"新大学","experiences":[""]});
 				case "sections":
 					return jQuery.extend(true,{},Section.emptyJSON,{title:"新建模块",fragments:[Fragment.emptyJSON]});
 			}
