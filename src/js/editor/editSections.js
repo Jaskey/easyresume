@@ -13,10 +13,15 @@
 					return this.props.json;
 				},
 
-				//列表fragment内容改变
+				//列表points fragment内容改变
 				handlePointChange:function(jsonKey,pointIndex, value){
 						var json = this.state;
-						json.points[pointIndex]=value;
+                        if ( value==null ) {//删除
+                            json[jsonKey].splice(pointIndex,1);
+                            console.debug('[CustomPoints][handleDetailsChange][delete]',pointIndex,value,json);
+                        } else {
+                            json.points[pointIndex] = value;
+                        }
 						this.props.onSectionChange(json);
 				},
 
@@ -50,7 +55,7 @@
 					var self = this;
 					var section = this.state;
 					var onValueChange = function(jsonKey, value){
-						console.debug("onValueChange for edit sections " +"jsonKey = " + jsonKey + "value  = " + value);
+						console.debug("[editSections][onValueChange]" +"jsonKey = " + jsonKey + "value  = " + value);
 						var json = self.state;
 						json[jsonKey] = value; 
 						self.props.onSectionChange(json);

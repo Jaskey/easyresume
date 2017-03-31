@@ -82,8 +82,13 @@
                 //工作经历的details详情更新
                 handleWorkDetailChange:function(workIndex,i,value){
                     var json = this.getEditorJSON();
-                    json.workExperiences[workIndex]['details'][i] = value;
-                    console.debug('hanldeWorkDetailChange',workIndex,i,value,json);
+                    if (value==null) {//删除
+                        json.workExperiences[workIndex]['details'].splice(i,1);
+                        console.debug('[hanldeWorkDetailChange][delete]',workIndex,i,value,json);
+                    } else {
+                        json.workExperiences[workIndex]['details'][i] = value;
+                        console.debug('[hanldeWorkDetailChange][update]',workIndex,i,value,json);
+                    }
                     this.updateStateJSON(json);
                 },
                 /*END : WORK*/

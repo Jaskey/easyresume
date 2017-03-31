@@ -23,6 +23,10 @@
                     this.props.onValueChange(this.props.jsonKey,this.props.values.length,"");
                 },
 
+                handleDeleteRow: function(event){
+                    this.props.onValueChange(this.props.jsonKey,this.props.values.length-1,undefined);
+                },
+
 				render:function(){
 					var self = this;
 					var props = this.props;
@@ -47,7 +51,8 @@
 									})
 								}
 								</div>
-								<div className="btn-add" title="添加一行" onClick={self.handleAddRow}></div>
+								<div className="btn-add" title="点击添加一行" onClick={self.handleAddRow}></div>
+								<div className="btn-delete" title="点击删除一行" onClick={self.handleDeleteRow}></div>
 
 
 						</div>

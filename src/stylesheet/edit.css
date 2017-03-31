@@ -122,15 +122,8 @@ body {
     border-radius: 10px;
 }
 
-.btn-add {
-url(../image/icon-add.png);
-    margin: 5px 0 0 5px;
-    display: block;
-    height: 20px;
-    width: 20px;
-    background-image: url(../image/icon-add.jpg);
-    cursor: pointer;
-}
+.btn-add {margin: 0px 0 0 5px;display: inline-block;height: 20px;width: 20px;background-image: url(../image/icon-add.jpg);cursor: pointer;vertical-align: middle;}
+.btn-delete {margin: 0 0 0 3px;display: inline-block;height: 20px;width: 20px;background-image: url(../image/icon-delete.jpg);cursor: pointer;vertical-align: middle;}
 
 .header .input-wrapper {
     margin: 0;

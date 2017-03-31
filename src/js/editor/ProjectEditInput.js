@@ -22,7 +22,12 @@
 
 				handleDetailsChange:function(jsonKey,index, value){
 					var json = this.props.json;
-					json[jsonKey][index]=value;
+                    if ( value==null ) {//删除
+                        json[jsonKey].splice(index,1);
+                        console.debug('[project][handleDetailsChange][delete]',index,value,json);
+                    }else {
+                        json[jsonKey][index] = value;
+                    }
 					this.props.onProjectChange(json);
 				},
 
