@@ -383,8 +383,8 @@
 								
 								<div className="edu-content">
 									<div className="score">
-										<div className="gpa"><span>GPA:{edu.gpa}</span></div>
-										<div className="scholarship"><span>奖学金:{edu.scholarships.join(' ')}</span></div>
+										{edu.gpa ? <div className="gpa"><span>GPA:{edu.gpa}</span></div> : null}
+										{edu.scholarships && (edu.scholarships.length > 1 || (edu.scholarships[0]))?<div className="scholarship"><span>奖学金:{edu.scholarships.join(' ')}</span></div> : null}
 									</div>
 									{exe}
 								</div>
