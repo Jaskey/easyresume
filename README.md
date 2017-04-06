@@ -7,13 +7,13 @@ EasyResume简单的使用一个json文件，配置属于你的简历的内容，
 ------------
 ## Demo
 
-[查看demo](http://jaskey.github.io/easyresume "例子")
+[查看demo](https://jaskey.github.io/easyresume "例子")
 
 ## 在线编辑器
 
 建议使用在线编辑编辑后再下载到本地手动调整`resume.json`文件。
 
-链接：[在线编辑器(Beta)](http://jaskey.github.io/easyresume/edit.html "在线编辑")
+链接：[在线编辑器(Beta)](https://jaskey.github.io/easyresume/edit.html "在线编辑")
 
 --------------
 ## 快速开始
@@ -59,7 +59,7 @@ EasyResume简单的使用一个json文件，配置属于你的简历的内容，
 
 整个简历仅需要读取`resume.json`文件，通过修改`resume.json`文件即可更新简历内容。本文档详细介绍resume.json中所有的结构及意义。
 
-建议初次使用者，使用[在线编辑器(Beta)](http://jaskey.github.io/easyresume/edit.html "在线编辑")在线编辑简单的模版后，下载至本地再手动调整。
+建议初次使用者，使用[在线编辑器(Beta)](https://jaskey.github.io/easyresume/edit.html "在线编辑")在线编辑简单的模版后，下载至本地再手动调整。
 
 注：`resume.json`文件必须严格按照JSON格式，请务必检查好格式，否则简历初始化会失败，建议上传前先使用工具检查好文件格式。
 
