@@ -1,0 +1,127 @@
+{
+    "name": "成旭源",
+    "birth": "11.03",
+    "tel": "136606xxxxxx",
+    "email": "linjunjie1103@gmail.com(作者邮箱，可联系)",
+    "blog": "http://jaskey.github.io",
+    "avatar": "头像的路径（相对于项目路径）",
+    "pages": [],
+    "summaries": [
+        "概述第一行",
+        "概述第二行",
+        "概述第三行",
+        "概述第四行"
+    ],
+    "workExperiences": [
+        {
+            "company": "大腿公司",
+            "post": "高级软件工程师",
+            "startDate": "2015.01",
+            "endDate": "至今",
+            "summary": "大腿公司的概述（可以不填）",
+            "details": [
+                "大腿公司的细节一",
+                "大腿公司的细节二"
+            ]
+        },
+        {
+            "company": "小牛公司",
+            "post": "软件工程师",
+            "startDate": "2013.07",
+            "endDate": "2015.01",
+            "summary": "小牛公司的概述（可以不填）",
+            "details": [
+                "小牛公司的细节一",
+                "小牛公司的细节二"
+            ]
+        }
+    ],
+    "projectExperiences": [
+        {
+            "projectName": "牛逼的项目",
+            "role": "主要开发成员",
+            "startDate": "2015.01",
+            "endDate": "2016.04",
+            "summary": "牛逼项目概述（可以不填）",
+            "details": [
+                "牛逼的项目细节一",
+                "牛逼的项目细节二",
+                "牛逼的项目细节三"
+            ]
+        },
+        {
+            "projectName": "牛X的项目",
+            "role": "兼职开发",
+            "startDate": "2015.08",
+            "endDate": "2015.11",
+            "summary": "牛X的项目概述（可不填）",
+            "details": [
+                "牛X的项目细节一",
+                "牛X的项目细节二"
+            ]
+        }
+    ],
+    "sections": [
+        {
+            "title": "自定义模块一",
+            "fragments": [
+                {
+                    "name": "自定义模块一之——段落一",
+                    "comment": "副标题（可以缺省）",
+                    "startDate": "开始日期（可缺省）",
+                    "endDate": "结束日期（可缺省）",
+                    "summary": "blablablablabla",
+                    "details": ["细节1234"]
+                },
+                {
+                    "name": "自定义模块一之——段落二",
+                    "comment": "副标题（可以缺省）",
+                    "startDate": "开始日期（可缺省）",
+                    "endDate": "结束日期（可缺省）",
+                    "summary": "blablablablabla",
+                    "details": ["细节5678"]
+                }
+            ]
+        },
+        {
+            "title": "自定义模块二",
+            "fragments": [
+                {
+                    "name": "自定义模块二之段落一",
+                    "comment": "副标题（可以缺省）",
+                    "startDate": "开始日期（可缺省）",
+                    "endDate": "结束日期（可缺省）",
+                    "summary": "blablablablabla",
+                    "details": [
+                        "细节1234"
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "自定义模块三",
+            "points": [
+                "列表1",
+                "列表2",
+                "列表3"
+            ]
+        }
+    ],
+    "educations": [
+        {
+            "university": "华南农业大学",
+            "studyType": "本科",
+            "major": "软件工程",
+            "startDate": "2009.07",
+            "endDate": "2013.07",
+            "gpa": "3.93/5.00",
+            "scholarships": [
+                "二等奖学金"
+            ],
+            "experiences": [
+                "在校经历一",
+                "在校经历二"
+            ]
+        }
+    ]
+}

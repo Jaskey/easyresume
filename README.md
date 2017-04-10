@@ -82,7 +82,7 @@ projectExperiences| 项目 | 字符串 | []
 sections|自定义经历/段落 | 数组 | []
 educations|教育经历 | 数组 | []
 
-详细配置及说明见后续章节
+其中`edit_template.json`是一个模版例子，可以按照这个模版填入类容。json详细配置及说明见后续章节。
 
 
 ### 工作经历
