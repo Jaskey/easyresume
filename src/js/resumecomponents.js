@@ -1,4 +1,8 @@
-﻿/*定义所有简历显示的ReactJS组件*/
+﻿function createMarkup(html) {
+    return {__html: html};
+}
+
+/*定义所有简历显示的ReactJS组件*/
 		window.Resume = React.createClass({
 			getDefaultProps:function (){
 				return {
@@ -70,23 +74,19 @@
 
 					render:function(){
 						var pageUrl;
+						var pageIconFont;
 						for( var key in this.props.page){
 							pageUrl=this.props.page[key];
-							break;
+                            pageIconFont=iconfontKeymap[key.toLowerCase()];
+                            break;
 						}
-						return (<a ref="iconFontSpan" className="page-icon-font" href={pageUrl} target="_blank"></a>)
+						return (
+						    <a ref="iconFontSpan" className="page-icon-font" href={pageUrl} target="_blank"
+                               dangerouslySetInnerHTML={createMarkup(pageIconFont)}>{/*inner html是iconfont*/}
+                            </a>
+                        )
 					},
-					componentDidMount:function(){
-						var page="default";
-						
-						for( var key in this.props.page){
-							page=key.toLowerCase();
-							break;
-						}
-						
-						//$(React.findDOMNode(this.refs.iconFontSpan)).html(iconfontKeymap[page]);//react 13
-						$(this.refs.iconFontSpan).html(iconfontKeymap[page]);//react 15
-					}
+					componentDidMount:function(){}
 				}
 			}());
 
@@ -122,7 +122,7 @@
 						<div className="info-contact">
 								<div>电话:{this.props.tel}</div>
 								<div>邮件:{this.props.email}</div>
-                                {this.props.blog? <div>博客:{this.props.blog}</div>:null}{/*有博客则显示博客*/}
+                                {this.props.blog? <span>博客:<span dangerouslySetInnerHTML={createMarkup(this.props.blog)}/></span>:null}{/*有博客则显示博客*/}
 						</div>
 					</div>
 				)
