@@ -1,11 +1,10 @@
-﻿		window.Resume = React.createClass({
+﻿/*定义所有简历显示的ReactJS组件*/
+		window.Resume = React.createClass({
 			getDefaultProps:function (){
-				console.debug('[Resume][getDefaultProps]');
 				return {
 					json:{}
 				}
 			},
-			
 
 			getInitialState:function(){
 				console.debug('[Resume][getInitialState]');
@@ -31,6 +30,7 @@
 							  birth={this.props.json.birth}//生日
 							  email={this.props.json.email}//邮件
 							  tel={this.props.json.tel}//电话
+							  blog={this.props.json.blog}//博客
 							  avatar={this.props.json.avatar}//头像
 							  pages={this.props.json.pages}//个人主页的icon链接
 							  />
@@ -89,7 +89,8 @@
 					}
 				}
 			}());
-		
+
+		/*个人信息*/
 		window.Info  = React.createClass({
 			getDefaultProps:function(){
 				return {
@@ -97,6 +98,7 @@
 					birth:null,
 					tel:null,
 					email:null,
+					blog:null,
 					avatar:'/image/avatar.jpg',
 					pages:[]
 				}
@@ -120,10 +122,11 @@
 						<div className="info-contact">
 								<div>电话:{this.props.tel}</div>
 								<div>邮件:{this.props.email}</div>
+                                {this.props.blog? <div>博客:{this.props.blog}</div>:null}{/*有博客则显示博客*/}
 						</div>
 					</div>
 				)
-			},
+			}
 		});
 		
 		window.Summary = React.createClass({
