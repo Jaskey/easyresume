@@ -1,33 +1,46 @@
 {
-    "name":"林俊杰",
-    "birth":"11.03",
-    "tel":"1366060****",
-    "email":"linjunjie1103@gmail.com",
-    "blog":"<a href='https://jaskey.github.io'>jaskey.github.io</a>",
-    "avatar":"image/jaskey.jpg",
-    "pages":[
-        {"zhihu":"http://www.zhihu.com/people/linjunjie1103"},
-        {"stackoverflow":"http://stackoverflow.com/users/2087628/jaskey"},
-        {"github":"https://github.com/Jaskey"},
-        {"linkedin":"http://www.linkedin.com/in/jaskeylam/zh-cn?locale=zh_CN&trk=profile_view_lang_sel_click"},
-        {"douban":"http://www.douban.com/people/linjunjie1103/"}
-    ],
-    "summaries":[
-        "熟练Java、Javascript、掌握Android开发，SQL、PL/SQL；用过C、C#、VBA等其他编程语言。",
-        "深谙面向对象设计原则、掌握多种设计模式并能自如应用于日常开发；熟悉 Java 多线程、同步模型。",
-        "掌握限流、隔离、熔断、降级等高可用架构设计手段；有高并发场景下分布式架构设计、开发的经验。",
-        "开源项目Apache RocketMQ Top Contributor、代码贡献者；知乎专栏RocketMQ详解创立者。",
-        "突出的学习能力和学习热情，在 MOOC 课程完成 3 门证书；善利用文档、StackOverflow 解决问题。",
-        "擅用重构手段，有代码洁癖，把代码的“可维护性”和“可读性”置于首位；代码质量曾被多家大型互联网公司领导赞扬。"
-    ],
-    "workExperiences":[
+    "name": "林俊杰",
+    "birth": "11.03",
+    "tel": "1366060****",
+    "email": "linjunjie1103@gmail.com",
+    "blog": "<a href='https://jaskey.github.io'>jaskey.github.io</a>",
+    "avatar": "image/jaskey.jpg",
+    "pages": [
         {
-            "company":"微众银行",
-            "post":"基础架构平台软件工程师",
-            "startDate":"2016.05",
-            "endDate":"至今",
-            "summary":"参与微众银行自研的消息中间件——WeMQ的研发工作；分布式服务框架——RMB的版本开发。",
-            "details":[
+            "zhihu": "http://www.zhihu.com/people/linjunjie1103"
+        },
+        {
+            "stackoverflow": "http://stackoverflow.com/users/2087628/jaskey"
+        },
+        {
+            "github": "https://github.com/Jaskey"
+        },
+        {
+            "linkedin": "http://www.linkedin.com/in/jaskeylam/zh-cn?locale=zh_CN&trk=profile_view_lang_sel_click"
+        },
+        {
+            "douban": "http://www.douban.com/people/linjunjie1103/"
+        }
+    ],
+    "summaries": [
+        "8年大型互联网/科技外企（Oracle、网易、微众银行、OPPO）程序开发、架构设计经验；2年10人研发团队技术管理经验；具备大型业务分布式系统及基础技术双重研发背景。",
+        "Apache RocketMQ Committer、知乎专栏《RocketMQ详解》（https://zhuanlan.zhihu.com/rocketmq）作者、RocketMQ 深圳Meetup 分享嘉宾。",
+        "具有丰富的技术难题处理经验、良好的问题分解能力、优秀的学习能力、跨领域关联能力；善抓住问题本质，能在技术及业务间做合理trade off。",
+        "技术建设上具备高可用、多活建设等架构经验；掌握限流、隔离、熔断、降级等高可用架构设计手段；有丰富的高并发场景下分布式架构设计、开发的经验；",
+        "接受过专业的战略规划PPT汇报训练，故具备良好的PPT书写能力；技术上能作出清晰的顶层架构设计及阐明技术价值，逻辑严密的技术汇报。",
+        "产品上，拥有较好的产品sense和用户思维，曾被高管推荐转型产品经理；曾被推荐而全职参与OPPO公司为期半年的战略规划项目，拥有多次战略研讨会议、高管汇报等难得经验；个人发展目标是成为技术+产品的复合型人才。",
+        "编程能力上，深谙面向对象设计原则、多种设计模式并能灵活娴熟地应用于日常开发；擅用重构手段，有代码洁癖，把代码的“可维护性”和“可读性”置于首位，职业生涯初期曾因代码质量曾被多家公司领导赞扬。",
+        "业余学习上，在 MOOC 课程完成 3 门证书；善做技术总结，拥有长期更新的原创技术博客、知乎账号。",
+        "外语方面，具备外企工作经验，有可日常交流的英文口语、商务英语能力；大学曾是英语口语协会会长，具有剑桥商务英语证书。"
+    ],
+    "workExperiences": [
+        {
+            "company": "微众银行",
+            "post": "基础架构平台软件工程师",
+            "startDate": "2016.05",
+            "endDate": "至今",
+            "summary": "参与微众银行自研的消息中间件——WeMQ的研发工作；分布式服务框架——RMB的版本开发。",
+            "details": [
                 "微众银行可靠消息总线（RMB）版本核心开发人员；业务联机服务生产问题定位最前线者。",
                 "参与设计、开发微众银行自研消息中间件WeMQ，目标是提供金融级别可靠性的消息存储、转发服务。",
                 "进行Code Review、管理测试人员，管理RMB及WeMQ的测试工作和部分新特性开发；参与招聘面试。",
@@ -35,12 +48,12 @@
             ]
         },
         {
-            "company":"网易游戏",
-            "post":"高级软件工程师",
-            "startDate":"2015.01",
-            "endDate":"2016.05",
-            "summary":"使用Java、JavaScript开发网易游戏数据平台（有数），供百余款游戏提供可视化数据分析。",
-            "details":[
+            "company": "网易游戏",
+            "post": "高级软件工程师",
+            "startDate": "2015.01",
+            "endDate": "2016.05",
+            "summary": "使用Java、JavaScript开发网易游戏数据平台（有数），供百余款游戏提供可视化数据分析。",
+            "details": [
                 "整个系统前端交互、视觉迭代、前端重构等主要负责人；国际化、pjax局部刷新、权限管理、页面布局开发者。",
                 "完成多个专题页面：多游戏产品概览、运营报表、梦幻手游物品产销、镇魔曲实时数据分析、开测对比、付费专题、留存专题、服务器分析、武魂战斗力分析专题等。新专题页面使平台活跃/新增用户均增加约100%。",
                 "PromeData项目的开发者，提供玩家标签数据REST服务接口，供游戏产品查询如玩家消费、登录、性别等标签。",
@@ -48,37 +61,37 @@
             ]
         },
         {
-            "company":"甲骨文",
-            "post":"软件工程师",
-            "startDate":"2013.07",
-            "endDate":"2015.01",
-            "summary":"开发并维护Oracle EBS（电子商务套件）资产管理系统，为全球客户（如Facebook、华为）提供系统研发支持。",
-            "details":[
+            "company": "甲骨文",
+            "post": "软件工程师",
+            "startDate": "2013.07",
+            "endDate": "2015.01",
+            "summary": "开发并维护Oracle EBS（电子商务套件）资产管理系统，为全球客户（如Facebook、华为）提供系统研发支持。",
+            "details": [
                 "维护代码量千万级别的Java和PL/SQL代码，对系统进行新功能开发、对100多张数据库表进行数据维护。",
                 "FY14财年组内开发效率、绩效最高者之一：绩效被经理评价为“达到Senior级别”",
                 "平均每月完成10个，最高20个（KPI 4-6个）新功能/Bug fix；为全球客户开发了100多个客户功能补丁。"
             ]
         },
         {
-            "company":"UC浏览器",
-            "post":"软件工程师(实习)",
-            "startDate":"2012.11",
-            "endDate":"2013.04",
-            "summary":"任系统支撑组开发实习生；使用Java，Play!+ExtJS框架开发UC平台系统，供4个城市4000余名员工使用。",
-            "details":[
+            "company": "UC浏览器",
+            "post": "软件工程师(实习)",
+            "startDate": "2012.11",
+            "endDate": "2013.04",
+            "summary": "任系统支撑组开发实习生；使用Java，Play!+ExtJS框架开发UC平台系统，供4个城市4000余名员工使用。",
+            "details": [
                 "使用Play!和ExtJS框架实现事务督办系统的在对事件的条件设定、按提醒条件发送邮件等第一版本所有功能。",
                 "使用Java独立完成了会议管理系统1.10中会议室算法推荐、加载会议室平面图等版本的所有功能。"
             ]
         }
     ],
-    "projectExperiences":[
+    "projectExperiences": [
         {
-            "projectName":"微众银行自研消息中间件（WeMQ）",
-            "role":"核心设计&研发成员",
-            "startDate":"2016.05",
-            "endDate":"至今",
-            "summary":"WeMQ是基于RocketMQ深度改造的分布式消息中间件。兼容RMB协议，以无缝从原商业中间件切换过来。",
-            "details":[
+            "projectName": "微众银行自研消息中间件（WeMQ）",
+            "role": "核心设计&研发成员",
+            "startDate": "2016.05",
+            "endDate": "至今",
+            "summary": "WeMQ是基于RocketMQ深度改造的分布式消息中间件。兼容RMB协议，以无缝从原商业中间件切换过来。",
+            "details": [
                 "开发出基于异步消息的可靠同步RPC RR（Request/Response）调用。实现银行业务的联机交易服务。",
                 "消费者端针对服务级别的消费流控保护；实现了消费过慢时unAck保护，并防止线程资源被故障服务独占。",
                 "queue深度控制的开发，并在Producer端实现动态熔断的选queue算法。",
@@ -88,12 +101,12 @@
             ]
         },
         {
-            "projectName":"微众银行可靠消息总线（RMB）",
-            "role":"主力研发成员",
-            "startDate":"2016.05",
-            "endDate":"至今",
-            "summary":"微众银行第一个项目，是一套基于消息中间件的，实现分布式联机交易的框架；Webank去IOE的架构基础。",
-            "details":[
+            "projectName": "微众银行可靠消息总线（RMB）",
+            "role": "主力研发成员",
+            "startDate": "2016.05",
+            "endDate": "至今",
+            "summary": "微众银行第一个项目，是一套基于消息中间件的，实现分布式联机交易的框架；Webank去IOE的架构基础。",
+            "details": [
                 "以埋点的方式，开发RMB调用的指标监控——如成功/失败率、耗时等，实现预警、服务调用链梳理等功能。",
                 "利用续费策略优化查询GSL（微众银行的服务定位服务）缓存策略，提高GSL异常场景下RMB的可用性。",
                 "基于WeMQ开发全新的RMB实现版本，并兼容已有协议及接口，并在过渡期兼容两套MQ共存。",
@@ -101,12 +114,12 @@
             ]
         },
         {
-            "projectName":"网易游戏数据分析系统",
-            "role":"主要开发成员",
-            "startDate":"2015.01",
-            "endDate":"2016.04",
-            "summary":"",
-            "details":[
+            "projectName": "网易游戏数据分析系统",
+            "role": "主要开发成员",
+            "startDate": "2015.01",
+            "endDate": "2016.04",
+            "summary": "",
+            "details": [
                 "页面交互、视觉迭代主要负责人；页面导航结构开发者；编写多个通用性前端控件、数据交互、工具类函数。",
                 "使用Java+JS开发十余个数据可视化页面：运营报表、付费专题、留存专题等、用研团队工具十余个模块。",
                 "使用Spring MVC，Thrift创建PromeData项目提供数据标签的REST服务。",
@@ -114,123 +127,137 @@
             ]
         },
         {
-            "projectName":"Oracle EBS",
-            "role":"主要成员",
-            "startDate":"2012.11",
-            "endDate":"2013.04",
-            "summary":"与美国、印度研发团队合作，对Oracle EBS(电子商务套件)资产管理（EAM）系统进行新功能开发，系统维护。",
-            "details":[
+            "projectName": "Oracle EBS",
+            "role": "主要成员",
+            "startDate": "2012.11",
+            "endDate": "2013.04",
+            "summary": "与美国、印度研发团队合作，对Oracle EBS(电子商务套件)资产管理（EAM）系统进行新功能开发，系统维护。",
+            "details": [
                 "同时对系统4个版本中业务最复杂的工单、预测维修、报告分析等模块进行新功能开发、代码维护、数据修复。",
                 "与团队一高级工程师一同负责最新子模块线性资产（LAM）的事件服务、REST接口代码开发工作。",
                 "采用MVC模式，使用Java+OAF框架进行Web开发，PL/SQL进行数据验证以及业务逻辑的实现。"
             ]
         }
     ],
-    "sections":[
+    "sections": [
         {
-            "title":"开源项目&&个人项目",
-            "fragments":[
+            "title": "开源项目&&个人项目",
+            "fragments": [
                 {
-                    "name":"http://rocketmq.apache.org",
-                    "comment":"Apache开源项目",
-                    "startDate":"",
-                    "endDate":"",
-                    "summary":"参与孵化Apache RocketMQ的开源开发工作，解答社区问题，输出文档、原理解析文章等。",
-                    "details":["提交了十余个PR给开源社区，其中包含使用一致性哈希算法的consume queue分配策略，解决“惊群效应”。"]
+                    "name": "http://rocketmq.apache.org",
+                    "comment": "Apache开源项目",
+                    "startDate": "",
+                    "endDate": "",
+                    "summary": "参与孵化Apache RocketMQ的开源开发工作，解答社区问题，输出文档、原理解析文章等。",
+                    "details": [
+                        "提交了十余个PR给开源社区，其中包含使用一致性哈希算法的consume queue分配策略，解决“惊群效应”。"
+                    ]
                 },
                 {
-                    "name":"EasyResume(github.com/jaskey/easyresume)",
-                    "comment":"个人开源项目",
-                    "startDate":"2016.03",
-                    "endDate":"2016.04",
-                    "summary":"使用JSON配置内容，快速生成简历。支持自定义简历各个模块，提供在线编辑功能。",
-                    "details":[
+                    "name": "EasyResume(github.com/jaskey/easyresume)",
+                    "comment": "个人开源项目",
+                    "startDate": "2016.03",
+                    "endDate": "2016.04",
+                    "summary": "使用JSON配置内容，快速生成简历。支持自定义简历各个模块，提供在线编辑功能。",
+                    "details": [
                         "使用ReactJS定义简历各部分组件；CSS样式支持响应式布局。"
                     ]
                 },
                 {
-                    "name":"One Menu",
-                    "comment":"兼职开发",
-                    "startDate":"2015.08",
-                    "endDate":"2015.11",
-                    "summary":"为美国创业者开发One Menu（美国O2O外卖订餐App）服务段接口；使用Github、Trello协作。",
-                    "details":[
+                    "name": "One Menu",
+                    "comment": "兼职开发",
+                    "startDate": "2015.08",
+                    "endDate": "2015.11",
+                    "summary": "为美国创业者开发One Menu（美国O2O外卖订餐App）服务段接口；使用Github、Trello协作。",
+                    "details": [
                         "使用Spring MVC , Hibernate开发购物车，优惠券相关的数十个后端接口供前端数据获取。",
                         "设计并实现使用责任链+空对象设计模式，处理多优惠劵条件判断、价格计算等逻辑。"
                     ]
                 },
                 {
-                    "name":"谁是卧底瞬间玩（微信公众号wodinow）",
-                    "comment":"个人项目",
-                    "startDate":"2014.06",
-                    "endDate":"2014.08",
-                    "summary":"用Java EE（后用Spring重构）+jQuery Mobile对接微信接口，现微信体验最好的谁是卧底助手，没有之一。",
-                    "details":[
+                    "name": "谁是卧底瞬间玩（微信公众号wodinow）",
+                    "comment": "个人项目",
+                    "startDate": "2014.06",
+                    "endDate": "2014.08",
+                    "summary": "用Java EE（后用Spring重构）+jQuery Mobile对接微信接口，现微信体验最好的谁是卧底助手，没有之一。",
+                    "details": [
                         "使用Spring MVC响应微信请求，Spring AOP完成日志切面，jQuery Mobile编写用户帮助页面，部署于BAE。",
                         "使用模版方法模式、策略模式处理房间逻辑、游戏逻辑；使用Redis处理用户状态，guava库作本地缓存。"
                     ]
                 }
             ]
         },
-
         {
-            "title":"开发小工具",
-            "fragments":[{
-                "name":"微信公众号测试客户端",
-                "comment":"",
-                "startDate":"",
-                "endDate":"",
-                "summary":"完成发送HTTP测试数据并解析响应数据的功能测试Swing客户端，大大提高复杂逻辑的公众号功能测试效率。",
-                "details":[]
-            },
+            "title": "开发小工具",
+            "fragments": [
                 {
-                    "name":"火狐搜索插件",
-                    "comment":"",
-                    "startDate":"",
-                    "endDate":"",
-                    "summary":"独立编写快速搜索小插件，使用Spring MVC+HttpClient完成搜索推荐（如热门微博）的数据格式适配。",
-                    "details":[]
-                }]
+                    "name": "微信公众号测试客户端",
+                    "comment": "",
+                    "startDate": "",
+                    "endDate": "",
+                    "summary": "完成发送HTTP测试数据并解析响应数据的功能测试Swing客户端，大大提高复杂逻辑的公众号功能测试效率。",
+                    "details": []
+                },
+                {
+                    "name": "火狐搜索插件",
+                    "comment": "",
+                    "startDate": "",
+                    "endDate": "",
+                    "summary": "独立编写快速搜索小插件，使用Spring MVC+HttpClient完成搜索推荐（如热门微博）的数据格式适配。",
+                    "details": []
+                }
+            ]
         },
         {
-            "title":"培训经历",
-            "fragments":[{
-                "name":"甲骨文人才发展中心",
-                "comment":"2013校招培训项目",
-                "startDate":"2013.09",
-                "endDate":"2013.12",
-                "summary":"",
-                "details":["校招深圳研发中心B组组长，第一届甲骨文编程马拉松中获带领小组获项目“创新奖”，本人获“优秀小组长"]
-            },
+            "title": "培训经历",
+            "fragments": [
                 {
-                    "name":"甲骨文大学",
-                    "comment":"技术培训",
-                    "startDate":"2013.7",
-                    "endDate":"2013.9",
-                    "summary":"参与甲骨文大学(对外)Java7 、SQL、PL/SQL、Oracle Application Framework（OAF）等7门技术培训课程。",
-                    "details":[]
-                }]
+                    "name": "甲骨文人才发展中心",
+                    "comment": "2013校招培训项目",
+                    "startDate": "2013.09",
+                    "endDate": "2013.12",
+                    "summary": "",
+                    "details": [
+                        "校招深圳研发中心B组组长，第一届甲骨文编程马拉松中获带领小组获项目“创新奖”，本人获“优秀小组长"
+                    ]
+                },
+                {
+                    "name": "甲骨文大学",
+                    "comment": "技术培训",
+                    "startDate": "2013.7",
+                    "endDate": "2013.9",
+                    "summary": "参与甲骨文大学(对外)Java7 、SQL、PL/SQL、Oracle Application Framework（OAF）等7门技术培训课程。",
+                    "details": []
+                }
+            ]
         },
         {
-            "title":"英语能力",
-            "points":["无障碍阅读原版技术书籍、文档、StackOverflow","能与跨国团队协作","英语六级、剑桥商务英语国际证书。"]
+            "title": "英语能力",
+            "points": [
+                "无障碍阅读原版技术书籍、文档、StackOverflow",
+                "能与跨国团队协作",
+                "英语六级、剑桥商务英语国际证书。"
+            ]
         }
     ],
-
-    "educations":[{
-        "university":"华南农业大学",
-        "studyType":"本科",
-        "major":"软件工程",
-        "startDate":"2009.07",
-        "endDate":"2013.07",
-        "gpa":"3.93/5.00",
-        "scholarships":["2009-2010校二等奖学金","2010-2011校二等奖学金","2011-2012校社会实践学金"],
-        "experiences":[
-            "英语口语协会会长，信息技术中心常务部副部长，软件学院助理班主任",
-            "社团类荣誉：2010年度华南农业大学“优秀团干部”、2009年度华南农业大学“优秀团员”",
-            "实践类荣誉：2010亚运会志愿服务“志愿者先进个人”、“突出贡献奖”、第四届“新鲜人”才艺大赛二等奖"
-        ]
-    }
+    "educations": [
+        {
+            "university": "华南农业大学",
+            "studyType": "本科",
+            "major": "软件工程",
+            "startDate": "2009.07",
+            "endDate": "2013.07",
+            "gpa": "3.93/5.00",
+            "scholarships": [
+                "2009-2010校二等奖学金",
+                "2010-2011校二等奖学金",
+                "2011-2012校社会实践学金"
+            ],
+            "experiences": [
+                "英语口语协会会长，信息技术中心常务部副部长，软件学院助理班主任",
+                "社团类荣誉：2010年度华南农业大学“优秀团干部”、2009年度华南农业大学“优秀团员”",
+                "实践类荣誉：2010亚运会志愿服务“志愿者先进个人”、“突出贡献奖”、第四届“新鲜人”才艺大赛二等奖"
+            ]
+        }
     ]
-
 }
