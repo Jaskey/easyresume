@@ -20,7 +20,7 @@ EasyResume简单的使用一个json文件，配置属于你的简历的内容，
 使用`EasyResume`生成自己的在线简历只需要以下几步
 
 1. fork本项目项目
-2. 为fork后的项目[开启Github Page功能](https://guides.github.com/features/pages/ "怎样开启Github Page？")
+2. 为fork后的项目（建议用**master**分支开启）[开启Github Page功能](https://guides.github.com/features/pages/ "怎样开启Github Page？")
 3. 克隆fork后在个人名下的项目：`git clone https://github.com/YourGithubName/easyresume.git`
 4. 按照自身的经历，修改项目下的`resume.json`文件。
 5. commit代码并push到仓库
@@ -33,6 +33,8 @@ EasyResume简单的使用一个json文件，配置属于你的简历的内容，
 
 
 以后更新简历，只需要更新`resume.json`即可。
+
+注：更新前，建议合并本源仓库的新commit
 
 ## 在线访问： 
 
@@ -59,7 +61,7 @@ EasyResume简单的使用一个json文件，配置属于你的简历的内容，
 
 整个简历仅需要读取`resume.json`文件，通过修改`resume.json`文件即可更新简历内容。本文档详细介绍resume.json中所有的结构及意义。
 
-建议初次使用者，使用[在线编辑器(Beta)](https://jaskey.github.io/easyresume/edit.html "在线编辑")在线编辑简单的模版后，下载至本地再手动调整。
+初次使用者，建议使用[在线编辑器(Beta)](https://jaskey.github.io/easyresume/edit.html "在线编辑")在线编辑简单的模版后，下载至本地再手动调整。
 
 注：`resume.json`文件必须严格按照JSON格式，请务必检查好格式，否则简历初始化会失败，建议上传前先使用工具检查好文件格式。
 
@@ -77,13 +79,21 @@ blog|博客地址 | 字符串 | null
 avatar|头像地址 | 字符串 | "/image/avatar.jpg"
 pages|个人主页链接 | 数组 | []
 summaries|个人概况 | 字符串数组 | []
-workExperiences| 工作经历| 字符串 | []
-projectExperiences| 项目 | 字符串 | []
+workExperiences| 工作经历| 数组 | []
+projectExperiences| 项目 | 数组 | []
 sections|自定义经历/段落 | 数组 | []
 educations|教育经历 | 数组 | []
 
 其中`edit_template.json`是一个模版例子，可以按照这个模版填入类容。json详细配置及说明见后续章节。
 
+### 头像
+
+key: avatar
+
+
+头像默认使用项目路径下**/image/avatar.jpg** 。
+
+若需要更改，可以自己放置一个图片到对应路径下，并在`resume.json`上修改路径即可。
 
 ### 工作经历
 

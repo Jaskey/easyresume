@@ -65,14 +65,19 @@
     </div>	
 
 	<script type="text/babel">
-		$.getJSON("resume.json",[],function(data){
-			console.log('[resume.json read successfully]',data);
-			var json = data;
-			ReactDOM.render(<div><Resume  json={json}/></div>,document.getElementById('container'));
+		$.getJSON("resume.json",[])
+			.done(function(data){
+				console.log('[done][resume.json read successfully]',data);
+				var json = data;
+				ReactDOM.render(<div><Resume  json={json}/></div>,document.getElementById('container'));
 
-			var name = json.name;
-			if(name) document.title='EasyResume-'+name;
-		});
+				var name = json.name;
+				if(name) document.title='EasyResume-'+name;
+			}).fail(function(jqxhr, textStatus, error ){
+				var err = textStatus + ", " + error;
+            	console.error( "[Request resume.json Failed]: " + err );
+            	$('#defaultMsg').html("加载/解析resume.json文件错误 ："+textStatus+"。请确认json文件存在并且配置格式正确。<br> error :" +error);
+			});
 
 		//一秒后显示默认的提示区域，如果正常初始化，$('#defaultMsg')将不存在，故没有作用
 		window.setTimeout(function(){
