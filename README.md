@@ -227,6 +227,12 @@ weibo| 新浪微博
 - `fragments` :配置项和项目经历的配置一致。具体请参看配置示例。
 - `points` : 配置项中接受一个字符串数组。具体请参看配置示例
 
+## Github Page 404
+若曾经页面可以访问，后续发现404，请检查github page配置的分支、连接正确，若均正常可参考以下解决方案：
+
+https://stackoverflow.com/questions/11577147/how-to-fix-http-404-on-github-pages
+
+
 ## 打赏一块几毛
 
 如果EasyResume帮助到你找工作了，打赏几毛呗。支付宝帐号：120681430@qq.com
